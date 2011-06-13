@@ -1,0 +1,1189 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Appcelerator Developer Center - API for Titanium.UI.Window (version 1.6.2)</title>
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen" />
+<link rel="image_src" href="/assets/img/appc_icon.jpg"/>
+<meta property="og:site_name" content="Appcelerator Developer Center"/> 
+<meta property="og:image" content="/assets/img/appc_icon.jpg"/> 
+<script src="/assets/js/jquery-1.4.min.js" type="text/javascript"></script>
+	<style>
+	.deprecated
+	{
+		border:1px solid #900;
+		color: #D8000C;
+		background-color: #FFBABA;
+		padding:10px;
+		margin-top:10px;
+		margin-bottom:30px;
+	}
+	.apidoc .namespace_type
+	{
+		font-size:11px;
+		color:#aaa;
+		position:relative;
+		top:-20px;
+	}
+	.apidoc .since
+	{
+		font-size:11px;
+		color:#222;
+		position:absolute;
+		top:30px;
+		right:10px;
+	}
+	.apidoc  table
+	{
+		margin-top:10px;
+		border:1px solid #999;
+		width:99%;
+	}
+	.apidoc table.event
+	{
+		border:1px solid #ccc;
+	}
+	.apidoc table.event td
+	{
+		background-color:#eff;
+	}
+	.apidoc table.event td.name
+	{
+		font-weight:bold;
+		width:100px;
+	}
+	.apidoc table td.type
+	{
+		width:20px;
+	}
+	.apidoc table td
+	{
+		padding:4px;
+		vertical-align:top;
+		border-bottom:1px solid #ddd;
+	}
+	.apidoc table tr:last-child td
+	{
+		border-bottom:none !important;
+	}
+	.apidoc table td.name
+	{
+		font-weight:bold;
+	}
+	.apidoc table th
+	{
+		background-color:#aaa;
+		text-align:left;
+		padding:4px;
+		font-weight:bold;
+	}
+	.apidoc h3
+	{
+		margin-top:20px;
+	}
+	#sidenav .methods, #sidenav .properties, #sidenav .objects
+	{
+		font-size:10px;
+		margin-top:10px;
+		margin-left:0px;
+	}
+	li.subselected a
+	{
+		border-bottom:1px solid #9aa;
+	}
+	.apidoc
+	{
+		position:relative;
+	}
+	div.platforms
+	{
+		position:absolute;
+		right:12px;
+		top:10px;
+	}
+	div.platforms span.android
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/android12x12.png);
+		background-repeat:no-repeat;
+	}
+	div.platforms span.iphone
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/iphone12x12.png);
+		background-repeat:no-repeat;
+		top:-1px;
+		position:relative;
+	}
+	div.signature
+	{
+		margin-bottom:20px;
+		color:rgb(153,0,0);
+		font-weight:bold;
+	}
+	.apidoc h1
+	{
+		text-shadow: 2px 2px 2px #bbb;
+	}
+	#search.blur
+	{
+		color:#aaa;
+	}
+	</style>
+</head>
+<body>
+
+<header role="banner">
+	<div id="header">
+		<div class="titlebarLogo">
+	<h1><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h1>
+	<div class="arrow"></div>
+</div>
+<div class="squeeze">
+	<h2><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h2>
+	<nav>
+		<div class="login">
+							<a href="https://my.appcelerator.com/auth/signup">Signup</a> | <a href="https://my.appcelerator.com/auth/login?redirect_to=http%3A%2F%2Fdeveloper.appcelerator.com%2Fapidoc%2Fmobile%2Flatest%2FTitanium.UI.Window-object.html">Login</a>
+						<a class="last" href="http://www.appcelerator.com" title="Appcelerator.com"><img src="/assets/img/dotcom.png" style="position:relative;top:4px;left:8px;" alt="Appcelerator"/></a>
+		</div>
+	</nav>
+</div>
+	</div>
+	<div id="nav">
+		<div class="squeeze">
+			<nav>
+	<div class="primary">
+			<div class="  ">
+			<a href="/get_started" title="Get Started">Get Started</a>
+		</div>
+			<div class="  ">
+			<a href="/questions" title="Q&amp;A">Q&amp;A</a>
+		</div>
+			<div class="  ">
+			<a href="/documentation" title="Docs">Docs</a>
+		</div>
+			<div class="  ">
+			<a href="http://training.appcelerator.com/" title="AppU Training">AppU Training</a>
+		</div>
+			<div class="  ">
+			<a href="/devlink" title="DevLink">DevLink</a>
+		</div>
+			<div class="  last ">
+			<a href="/get_help" title="Get Help">Get Help</a>
+		</div>
+			<div class="clear"></div>
+	</div>
+</nav>
+<nav>
+	<div class="secondary">
+					<a class="last" title="Developer Blog" href="/blog">Developer Blog</a>
+			</div>
+</nav>
+		</div>
+	</div>
+</header>
+
+<div id="contentBG">
+
+	<div class="dropshadow"></div>
+	
+	<div class="squeeze">
+	
+		<div class="contentWithLeftSidebar">
+			<div class="apidoc">
+				<div class="apidoc_container apidoc_object">
+	
+<h1 class="namespace">Titanium.UI.Window</h1>
+<div class="namespace_type">object of <a href="../latest/Titanium.UI-module.html">Titanium.UI</a></div>
+<div class="platforms">
+<span class="android">&nbsp;&nbsp;&nbsp;</span>
+<span class="iphone">&nbsp;&nbsp;&nbsp;</span>
+<span class="ipad">&nbsp;&nbsp;&nbsp;</span>
+<div class="clear"></div>
+<span class="since">0.9</span>
+</div>
+
+<div class="description">
+<p>The Window is an empty drawing surface or container. The Window is created by the method <a href="../latest/Titanium.UI.createWindow-method.html">Titanium.UI.createWindow</a>. Unlike <a href="../latest/Titanium.UI.View-object.html">Views</a>, Windows can be opened and closed and can have special display properties such as <tt>fullscreen</tt> or <tt>modal</tt>.</p>
+</div>
+
+
+<h3>Methods</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.add-method.html">add</a></td>
+	<td class="description">add a child to the view hierarchy</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.addEventListener-method.html">addEventListener</a></td>
+	<td class="description">add an event listener for the instance to receive view triggered events</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.animate-method.html">animate</a></td>
+	<td class="description">animate the view</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.close-method.html">close</a></td>
+	<td class="description"><p>close the window</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.fireEvent-method.html">fireEvent</a></td>
+	<td class="description">fire a synthesized event to the views listener</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.hide-method.html">hide</a></td>
+	<td class="description">hide the view</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.open-method.html">open</a></td>
+	<td class="description"><p>open the window</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.remove-method.html">remove</a></td>
+	<td class="description">remove a previously add view from the view hiearchy</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.removeEventListener-method.html">removeEventListener</a></td>
+	<td class="description">remove a previously added event listener</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.show-method.html">show</a></td>
+	<td class="description">make the view visible</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window.toImage-method.html">toImage</a></td>
+	<td class="description">return a Blob image of the rendered view</td>
+</tr>
+</table>
+
+<h3>Properties</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name">anchorPoint</td>
+	<td class="type">object</td>
+	<td class="description">a dictionary with properties x and y to indicate the anchor point value. anchor specifies the position by which animation should occur. center is 0.5, 0.5</td>
+</tr>
+<tr>
+	<td class="name">animatedCenterPoint</td>
+	<td class="type">object</td>
+	<td class="description">read-only object with x and y properties of where the view is during animation</td>
+</tr>
+<tr>
+	<td class="name">backButtonTitle</td>
+	<td class="type">string</td>
+	<td class="description"><p>title for the back button. only available in iPhone. this is only valid when the window is a child of a tab.</p></td>
+</tr>
+<tr>
+	<td class="name">backButtonTitleImage</td>
+	<td class="type">string</td>
+	<td class="description"><p>url to an image to show as the back button.  only available in iPhone. this is only valid when the window is a child of a tab.</p></td>
+</tr>
+<tr>
+	<td class="name">backgroundColor</td>
+	<td class="type">string</td>
+	<td class="description">the background color of the view</td>
+</tr>
+<tr>
+	<td class="name">backgroundDisabledColor</td>
+	<td class="type">string</td>
+	<td class="description">the disabled background color of the view. (Android)</td>
+</tr>
+<tr>
+	<td class="name">backgroundDisabledImage</td>
+	<td class="type">string</td>
+	<td class="description">the disabled background image url of the view. (Android)</td>
+</tr>
+<tr>
+	<td class="name">backgroundFocusedColor</td>
+	<td class="type">string</td>
+	<td class="description">the focused background color of the view. focusable must be true for normal views. (Android)</td>
+</tr>
+<tr>
+	<td class="name">backgroundFocusedImage</td>
+	<td class="type">string</td>
+	<td class="description">the focused background image url of the view. focusable must be true for normal views. (Android)</td>
+</tr>
+<tr>
+	<td class="name">backgroundGradient</td>
+	<td class="type">object</td>
+	<td class="description">a background gradient for the view with the properties: type,startPoint,endPoint,startRadius,endRadius,backfillStart,backfillEnd,colors.</td>
+</tr>
+<tr>
+	<td class="name">backgroundImage</td>
+	<td class="type">string</td>
+	<td class="description">the background image url of the view</td>
+</tr>
+<tr>
+	<td class="name">backgroundLeftCap</td>
+	<td class="type">float</td>
+	<td class="description">End caps specify the portion of an image that should not be resized when an image is stretched. This technique is used to implement buttons and other resizable image-based interface elements. When a button with end caps is resized, the resizing occurs only in the middle of the button, in the region between the end caps. The end caps themselves keep their original size and appearance. This property specifies the size of the left end cap. The middle (stretchable) portion is assumed to be 1 pixel wide. The right end cap is therefore computed by adding the size of the left end cap and the middle portion together and then subtracting that value from the width of the image</td>
+</tr>
+<tr>
+	<td class="name">backgroundSelectedColor</td>
+	<td class="type">string</td>
+	<td class="description">the selected background color of the view. focusable must be true for normal views. (Android)</td>
+</tr>
+<tr>
+	<td class="name">backgroundSelectedImage</td>
+	<td class="type">string</td>
+	<td class="description">the selected background image url of the view. focusable must be true for normal views. (Android)</td>
+</tr>
+<tr>
+	<td class="name">backgroundTopCap</td>
+	<td class="type">float</td>
+	<td class="description">End caps specify the portion of an image that should not be resized when an image is stretched. This technique is used to implement buttons and other resizable image-based interface elements. When a button with end caps is resized, the resizing occurs only in the middle of the button, in the region between the end caps. The end caps themselves keep their original size and appearance. This property specifies the size of the top end cap. The middle (stretchable) portion is assumed to be 1 pixel wide. The bottom end cap is therefore computed by adding the size of the top end cap and the middle portion together and then subtracting that value from the height of the image</td>
+</tr>
+<tr>
+	<td class="name">barColor</td>
+	<td class="type">string</td>
+	<td class="description"><p>web named color or hex value for the color of the nav bar. only available in iPhone.</p></td>
+</tr>
+<tr>
+	<td class="name">barImage</td>
+	<td class="type">string</td>
+	<td class="description"><p>url to a local image to place as the background of the nav bar. only available in iPhone.</p></td>
+</tr>
+<tr>
+	<td class="name">borderColor</td>
+	<td class="type">string</td>
+	<td class="description">the border color of the view</td>
+</tr>
+<tr>
+	<td class="name">borderRadius</td>
+	<td class="type">float</td>
+	<td class="description">the border radius of the view</td>
+</tr>
+<tr>
+	<td class="name">borderWidth</td>
+	<td class="type">float</td>
+	<td class="description">the border width of the view</td>
+</tr>
+<tr>
+	<td class="name">bottom</td>
+	<td class="type">float,string</td>
+	<td class="description">property for the view bottom position. This position is relative to the view's parent. Can be either a float value or a dimension string ie 'auto' (default).</td>
+</tr>
+<tr>
+	<td class="name">center</td>
+	<td class="type">object</td>
+	<td class="description">a dictionary with properties x and y to indicate the center of the views position relative to the parent view</td>
+</tr>
+<tr>
+	<td class="name">exitOnClose</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>(Android only.) Boolean indicates if the application should exit when the Android back button is pressed while the window is being shown.  You can only set this as a createWindow({...}) option.  Setting it after window creation will no effect.</p></td>
+</tr>
+<tr>
+	<td class="name">focusable</td>
+	<td class="type">boolean</td>
+	<td class="description">Set true if you want a view to be focusable when navigating with the trackball or D-Pad. Default: false. (Android Only)</td>
+</tr>
+<tr>
+	<td class="name">font-family</td>
+	<td class="type">string</td>
+	<td class="description">the font family</td>
+</tr>
+<tr>
+	<td class="name">font-size</td>
+	<td class="type">string</td>
+	<td class="description">the font size</td>
+</tr>
+<tr>
+	<td class="name">font-style</td>
+	<td class="type">string</td>
+	<td class="description">the font style, either normal or italics</td>
+</tr>
+<tr>
+	<td class="name">font-weight</td>
+	<td class="type">string</td>
+	<td class="description">the font weight, either normal or bold</td>
+</tr>
+<tr>
+	<td class="name">fullscreen</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>boolean indicates if the window is fullscreen (no device chrome)</p></td>
+</tr>
+<tr>
+	<td class="name">height</td>
+	<td class="type">float,string</td>
+	<td class="description">property for the view height. Can be either a float value or a dimension string ie 'auto' (default).</td>
+</tr>
+<tr>
+	<td class="name">left</td>
+	<td class="type">float,string</td>
+	<td class="description">property for the view left position. This position is relative to the view's parent. Can be either a float value or a dimension string ie 'auto' (default).</td>
+</tr>
+<tr>
+	<td class="name">leftNavButton</td>
+	<td class="type">object</td>
+	<td class="description"><p>view to show in the left nav bar area. only available in iPhone.</p></td>
+</tr>
+<tr>
+	<td class="name">modal</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>boolean to indicate if the window should be opened modal in front of other windows</p></td>
+</tr>
+<tr>
+	<td class="name">navBarHidden</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>for modal windows, hide the nav bar (true) or show the nav bar (false, default).</p></td>
+</tr>
+<tr>
+	<td class="name">opacity</td>
+	<td class="type">float</td>
+	<td class="description">the opacity from 0.0-1.0</td>
+</tr>
+<tr>
+	<td class="name">orientationModes</td>
+	<td class="type">array</td>
+	<td class="description"><p>array of orientation mode constants defined in [Titanium.UI]</p></td>
+</tr>
+<tr>
+	<td class="name">right</td>
+	<td class="type">float,string</td>
+	<td class="description">property for the view right position. This position is relative to the view's parent. Can be either a float value or a dimension string ie 'auto' (default).</td>
+</tr>
+<tr>
+	<td class="name">rightNavButton</td>
+	<td class="type">object</td>
+	<td class="description"><p>view to show in the right nav bar area. only available in iPhone.</p></td>
+</tr>
+<tr>
+	<td class="name">size</td>
+	<td class="type">object</td>
+	<td class="description">the size of the view as a dictionary of width and height properties</td>
+</tr>
+<tr>
+	<td class="name">softInputMode</td>
+	<td class="type">int</td>
+	<td class="description"><p>One of Ti.UI.Android.SOFT_INPUT_ADJUST_PAN, Ti.UI.Android.SOFT_INPUT_ADJUST_RESIZE, or Ti.UI.Android.SOFT_INPUT_ADJUST_UNSPECIFIED. Note: MUST be passed in the creation options. (Android Only) <a href="http://developer.android.com/reference/android/view/Window.html#setSoftInputMode(int)">Android Doc: Window.setSoftInputMode</a></p></td>
+</tr>
+<tr>
+	<td class="name">softKeyboardOnFocus</td>
+	<td class="type">int</td>
+	<td class="description">One of Titanium.UI.Android.SOFT_KEYBOARD_DEFAULT_ON_FOCUS, Titanium.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS, or Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS. (Android only)</td>
+</tr>
+<tr>
+	<td class="name">tabBarHidden</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>boolean to indicate if the tab bar should be hidden. this is only valid when the window is a child of a tab.</p></td>
+</tr>
+<tr>
+	<td class="name">title</td>
+	<td class="type">string</td>
+	<td class="description"><p>title of the window.</p></td>
+</tr>
+<tr>
+	<td class="name">titleControl</td>
+	<td class="type">object</td>
+	<td class="description"><p>view to show in the title area. only available in iPhone.</p></td>
+</tr>
+<tr>
+	<td class="name">titleImage</td>
+	<td class="type">string</td>
+	<td class="description"><p>url to a image that show in the title area. only available in iPhone.</p></td>
+</tr>
+<tr>
+	<td class="name">titlePrompt</td>
+	<td class="type">string</td>
+	<td class="description"><p>title prompt for the window. only available in iPhone.</p></td>
+</tr>
+<tr>
+	<td class="name">titleid</td>
+	<td class="type">string</td>
+	<td class="description"><p>the key in the locale file to use for the title property</p></td>
+</tr>
+<tr>
+	<td class="name">titlepromptid</td>
+	<td class="type">string</td>
+	<td class="description"><p>the key in the locale file to use for the titlePrompt property</p></td>
+</tr>
+<tr>
+	<td class="name">toolbar</td>
+	<td class="type">array</td>
+	<td class="description"><p>array of button objects to show in the toolbar of the window. only available in iPhone. this is only valid when the window is a child of a tab.</p></td>
+</tr>
+<tr>
+	<td class="name">top</td>
+	<td class="type">float,string</td>
+	<td class="description">property for the view top position. This position is relative to the view's parent. Can be either a float value or a dimension string ie 'auto' (default).</td>
+</tr>
+<tr>
+	<td class="name">touchEnabled</td>
+	<td class="type">boolean</td>
+	<td class="description">a boolean indicating if the view should receive touch events (true, default) or forward them to peers (false)</td>
+</tr>
+<tr>
+	<td class="name">transform</td>
+	<td class="type">object</td>
+	<td class="description">the transformation matrix to apply to the view</td>
+</tr>
+<tr>
+	<td class="name">translucent</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>boolean to indicate if the nav bar is translucent. only available in iPhone.</p></td>
+</tr>
+<tr>
+	<td class="name">url</td>
+	<td class="type">string</td>
+	<td class="description"><p>url to a JavaScript file with the windows instructions. this window will create a new JavaScript sub-context that will run in its own thread and global variable space.</p></td>
+</tr>
+<tr>
+	<td class="name">visible</td>
+	<td class="type">boolean</td>
+	<td class="description">a boolean of the visibility of the view</td>
+</tr>
+<tr>
+	<td class="name">width</td>
+	<td class="type">float,string</td>
+	<td class="description">property for the view width. Can be either a float value or a dimension string ie 'auto' (default).</td>
+</tr>
+<tr>
+	<td class="name">zIndex</td>
+	<td class="type">int</td>
+	<td class="description">the z index position relative to other sibling views</td>
+</tr>
+</table>
+
+<h3>Events</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name">android:back</td>
+	<td class="description">
+		<p>fired when the back button is released. Setting a listener is interpreted as the handler for that button. To restore default behavior, remove the listener. It is recommended that you only have one handler per heavyweight window (Android Only)</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">android:camera</td>
+	<td class="description">
+		<p>fired when the camera button is released. Setting a listener is interpreted as the handler for that button. To restore default behavior, remove the listener. It is recommended that you only have one handler per heavyweight window (Android Only)</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">android:focus</td>
+	<td class="description">
+		<p>fired when the camera button is half-pressed then released. Setting a listener is interpreted as the handler for that button. To restore default behavior, remove the listener. It is recommended that you only have one handler per heavyweight window (Android Only)</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">android:search</td>
+	<td class="description">
+		<p>fired when the search button is released. Setting a listener is interpreted as the handler for that button. To restore default behavior, remove the listener. It is recommended that you only have one handler per heavyweight window (Android Only)</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">android:voldown</td>
+	<td class="description">
+		<p>fired when the volume down button is released. Setting a listener is interpreted as the handler for that button. To restore default behavior, remove the listener. It is recommended that you only have one handler per heavyweight window (Android Only)</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">android:volup</td>
+	<td class="description">
+		<p>fired when the volume up button is released. Setting a listener is interpreted as the handler for that button. To restore default behavior, remove the listener. It is recommended that you only have one handler per heavyweight window (Android Only)</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">blur</td>
+	<td class="description">
+		<p>fired when the window loses focus</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">click</td>
+	<td class="description">
+		fired when the device detects a click (longer than touch) against the view
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">close</td>
+	<td class="description">
+		<p>fired when the window is closed</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">dblclick</td>
+	<td class="description">
+		fired when the device detects a double click against the view
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">doubletap</td>
+	<td class="description">
+		fired when the device detects a double tap against the view
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">focus</td>
+	<td class="description">
+		<p>fired when the window gains focus</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">open</td>
+	<td class="description">
+		<p>fired when the window is opened</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">singletap</td>
+	<td class="description">
+		fired when the device detects a single tap against the view
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">swipe</td>
+	<td class="description">
+		fired when the device detects a swipe (left or right) against the view
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">direction</td><td>direction of the swipe - either left or right</td></tr>
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">touchcancel</td>
+	<td class="description">
+		fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">touchend</td>
+	<td class="description">
+		fired when a touch event is completed
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">touchmove</td>
+	<td class="description">
+		fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">touchstart</td>
+	<td class="description">
+		fired as soon as the device detects a gesture
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">twofingertap</td>
+	<td class="description">
+		fired when the device detects a two-finger tap against the view
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">globalPoint</td><td>a dictionary with properties x and y describing the point of the event in screen coordinates</td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">x</td><td>the x point of the event in receiving view coordiantes</td></tr>
+			<tr><td class="name">y</td><td>the y point of the event, in receiving view coordinates</td></tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+<h3>Code Examples</h3>
+
+<h4 class="code_example_title">Full Screen Window example</h4>
+<div class="code_example"><p>Create a fullscreen window with a red background.</p>
+<pre><div class="highlight"><pre><span class="kd">var</span> <span class="nb">window</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createWindow</span><span class="p">({</span>
+   <span class="nx">backgroundColor</span><span class="o">:</span><span class="s1">&#39;red&#39;</span>
+<span class="p">});</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span><span class="nx">fullscreen</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span>
+</pre></div>
+</pre></div>
+
+
+
+<h3>Notes</h3>
+
+<h3 id="sub-contexts">Sub-contexts</h3>
+<p>Windows can be loaded from another Javascript file by specifying the property <tt>url</tt> and reference a file relative to your application <tt>Resources</tt> folder.  It's important to note that Titanium will refuse to load Javascript files from a remote URL. Loading remote Javascript from a URL and providing it with the full capabilities of the Titanium API would be very dangerous. </p>
+<p>When you Window is loaded from a separate Javascript file, the code will be executed in a separate Javascript context (called a "sub-context") than your <tt>app.js</tt> global context.  It will also execute in its own separate thread.<br>
+</p>
+<p>The special property <a href="../latest/Titanium.UI.currentWindow.html">Titanium.UI.currentWindow</a> is available inside a sub-context that points to the Javascript instance by reference in the global context.<br>
+</p>
+<h3 id="passing_data">Passing Data</h3>
+<p>By default, sub-context variables cannot access Javascript references in the global context.  However, the global context can allow its sub-contexts the ability to have access to properties and functions in the global context by reference assignment.  An example best illustrates how to do this.</p>
+<p>In <tt>app.js</tt>, you could define a function and a property.</p>
+<pre><div class="highlight"><pre><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">b</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;hello&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+
+<p>Now, you can create a new Window - let's call it <tt>foo.js</tt> - in your <tt>app.js</tt>.</p>
+<pre><div class="highlight"><pre><span class="kd">var</span> <span class="nx">w</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createWindow</span><span class="p">({</span>
+    <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;foo.js&#39;</span>
+<span class="p">});</span>
+</pre></div>
+</pre>
+
+<p>To <em>give</em> your new window access to both <tt>a</tt> and <tt>b</tt>, you would need to assign them to the new window reference <tt>w</tt>.</p>
+<pre><div class="highlight"><pre><span class="nx">w</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span>
+<span class="nx">w</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="nx">b</span><span class="p">;</span>
+</pre></div>
+</pre>
+
+<p>Of course, you could give them a different name than their original names.  However, what name you give them in your <tt>app.js</tt> is how you will reference them in <tt>foo.js</tt>.  Now, let's look at the code for <tt>foo.js</tt>.</p>
+<pre><div class="highlight"><pre><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;b() = &quot;</span><span class="o">+</span><span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">currentWindow</span><span class="p">.</span><span class="nx">b</span><span class="p">());</span>
+</pre></div>
+</pre>
+
+<p>In the above code, the <tt>foo.js</tt> will execute the function <tt>b</tt> in the global context and return the result.  Since <tt>b</tt> is a reference (vs. a copy by value), any changes made to these Javascript references will be immediately available in all sub-contexts.</p>
+<h3 id="events">Events</h3>
+<p>If you'd like to send events to a window from the global context and vice versa, you could use the built-in event mechanism.  For example, you could define a custom event called <tt>foo</tt>. The window could listen for this event and then respond with some action.  For example, in your sub-context you might define:</p>
+<pre><div class="highlight"><pre><span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">currentWindow</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nx">Titanium</span><span class="p">.</span><span class="nx">API</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s2">&quot;foo event received = &quot;</span><span class="o">+</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">));</span>
+<span class="p">});</span>
+</pre></div>
+</pre>
+
+<p>You could now fire the event from <tt>app.js</tt> like this:</p>
+<pre><div class="highlight"><pre><span class="kd">var</span> <span class="nb">window</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createWindow</span><span class="p">({</span>
+    <span class="nx">url</span><span class="o">:</span><span class="s1">&#39;bar.js&#39;</span>
+<span class="p">});</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">fireEvent</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,{</span><span class="nx">a</span><span class="o">:</span><span class="s1">&#39;b&#39;</span><span class="p">});</span>
+</pre></div>
+</pre>
+
+<p>It's worth noting two important limitations of the example above:</p>
+<ul>
+<li>You must open the window before you can send events to it. You also may have to fire the event after a specified amount of time if you intend to immediately send data to the window.  This is because windows are opened asynchronously and on a separate thread than the caller thread.</li>
+<li>You can only send JSON-serializable data in a fireEvent.  If you attempt to send objects that have function references, they will be null.</li>
+</ul>
+<h3 id="animations">Animations</h3>
+<p>Windows can be animated like any normal <a href="../latest/Titanium.UI.View.html">View</a>.  To transition between 2 windows, you can use the <tt>transition</tt> property on an animation.  For example, to flip right-to-left between two windows, you could do the following:</p>
+<pre><div class="highlight"><pre><span class="kd">var</span> <span class="nx">window2</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createWindow</span><span class="p">({</span><span class="nx">url</span><span class="o">:</span><span class="s1">&#39;foo.js&#39;</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">iPhone</span><span class="p">.</span><span class="nx">AnimationStyle</span><span class="p">.</span><span class="nx">FLIP_FROM_LEFT</span><span class="p">;</span>
+<span class="nx">window1</span><span class="p">.</span><span class="nx">animate</span><span class="p">({</span><span class="nx">view</span><span class="o">:</span><span class="nx">window2</span><span class="p">,</span><span class="nx">transition</span><span class="o">:</span><span class="nx">t</span><span class="p">});</span>
+</pre></div>
+</pre>
+
+<p>In the above example, the <tt>window2</tt> view will be animated from the right-to-left over <tt>window1</tt>.</p>
+<p>Windows can be opened or closed with animation.  In the example below, we create a window that will open from small to large with a bounce effect.  This is done by applying a transformation at initialization time that scales the original size of the window to 0.  When the window is opened, a new 2D transformation is applied that will scale the window size from 0 to 110% of it's original size and then, after 1/20th of a second, will scale it back to it's original size at 100%. This gives the bounce effect during animation. </p>
+<pre><div class="highlight"><pre><span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">create2DMatrix</span><span class="p">().</span><span class="nx">scale</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="c1">// create a window with the initial transform scaled to 0</span>
+<span class="kd">var</span> <span class="nx">w</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createWindow</span><span class="p">({</span>
+    <span class="nx">backgroundColor</span><span class="o">:</span><span class="s1">&#39;#336699&#39;</span><span class="p">,</span>
+    <span class="nx">borderWidth</span><span class="o">:</span><span class="mi">8</span><span class="p">,</span>
+    <span class="nx">borderColor</span><span class="o">:</span><span class="s1">&#39;#999&#39;</span><span class="p">,</span>
+    <span class="nx">height</span><span class="o">:</span><span class="mi">400</span><span class="p">,</span>
+    <span class="nx">width</span><span class="o">:</span><span class="mi">300</span><span class="p">,</span>
+    <span class="nx">borderRadius</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+    <span class="nx">opacity</span><span class="o">:</span><span class="mf">0.92</span><span class="p">,</span>
+    <span class="nx">transform</span><span class="o">:</span><span class="nx">t</span>
+<span class="p">});</span>
+
+<span class="c1">// create first transform to go beyond normal size</span>
+<span class="kd">var</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">create2DMatrix</span><span class="p">().</span><span class="nx">scale</span><span class="p">(</span><span class="mf">1.1</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createAnimation</span><span class="p">();</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">transform</span> <span class="o">=</span> <span class="nx">t1</span><span class="p">;</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">duration</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+
+<span class="c1">// when this animation completes, scale to normal size</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;complete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// we can use the identity transform to take it back to it&#39;s real size</span>
+    <span class="kd">var</span> <span class="nx">t2</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">create2DMatrix</span><span class="p">();</span>
+    <span class="nx">w</span><span class="p">.</span><span class="nx">animate</span><span class="p">({</span><span class="nx">transform</span><span class="o">:</span><span class="nx">t2</span><span class="p">,</span> <span class="nx">duration</span><span class="o">:</span><span class="mi">200</span><span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</pre>
+
+<h3 id="ipad_modal_windows">iPad Modal Windows</h3>
+<p>For iPad, iPhone SDK 3.2 and Titanium 1.2 introduced several new ways of presenting modal windows.<br>
+</p>
+<p>The example below is a modal window.</p>
+<p><img alt="modal" src="http://img.skitch.com/20100406-bqb3f8pb6e4ger7wkcdcw5mbar.png"></p>
+<p>You can create this type of modal window on iPad with the following code snippet:</p>
+<pre><div class="highlight"><pre><span class="kd">var</span> <span class="nb">window</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createWindow</span><span class="p">();</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span>
+    <span class="nx">modal</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="nx">modalTransitionStyle</span><span class="o">:</span> <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">iPhone</span><span class="p">.</span><span class="nx">MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL</span><span class="p">,</span>
+    <span class="nx">modalStyle</span><span class="o">:</span> <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">iPhone</span><span class="p">.</span><span class="nx">MODAL_PRESENTATION_FORMSHEET</span>
+<span class="p">})</span>
+</pre></div>
+</pre>
+
+<h3 id="android_root_windows">Android "root" Windows</h3>
+<p>In Android, you may wish to specify that a window which you create (such as the first window) should be considered the root window and that the application should exit when the back button is pressed from that window.  This is particularly useful if your application is not using a Tab Group and therefore the splash screen window is appearing whenever you press the back button from your lowest window on the stack.</p>
+<p>To indicate that a particular window should cause an application to exit when the back button is pressed, pass <tt>exitOnClose: true</tt> as one of the creation arguments, as shown here:</p>
+<pre><div class="highlight"><pre><span class="kd">var</span> <span class="nx">win</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createWindow</span><span class="p">({</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;My Root Window&#39;</span><span class="p">,</span>
+    <span class="nx">exitOnClose</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+</pre></div>
+</pre>
+
+
+</div>			</div>
+		</div> 
+	
+		<div class="leftSidebar">
+			<h3>Mobile API Reference</h3>
+			<div style="margin-bottom:10px;">
+				<form method="GET" action="/apidoc/search/mobile/1.6.2">
+					<input class="blur" id="search" type="search" value="search documentation" name="q" style="width:99%"/>
+				</form>
+			</div>
+			<script>
+				$(function()
+				{
+					$('#search').blur(function()
+					{
+						$(this).val('search documentation').addClass('blur');
+					});
+					$('#search').focus(function()
+					{
+						$(this).val('').removeClass('blur');
+					});
+				});
+			</script>
+			<nav>
+				<ul id="sidenav">
+											<li class="">
+							<a href="../latest/Titanium-module.html">Titanium</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.API-module.html">Titanium.API</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Accelerometer-module.html">Titanium.Accelerometer</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Analytics-module.html">Titanium.Analytics</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android-module.html">Titanium.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.Calendar-module.html">Titanium.Android.Calendar</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.NotificationManager-module.html">Titanium.Android.NotificationManager</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App-module.html">Titanium.App</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Android-module.html">Titanium.App.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Properties-module.html">Titanium.App.Properties</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.iOS-module.html">Titanium.App.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Contacts-module.html">Titanium.Contacts</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Database-module.html">Titanium.Database</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Facebook-module.html">Titanium.Facebook</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Filesystem-module.html">Titanium.Filesystem</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Geolocation-module.html">Titanium.Geolocation</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Gesture-module.html">Titanium.Gesture</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Locale-module.html">Titanium.Locale</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Map-module.html">Titanium.Map</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Media-module.html">Titanium.Media</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Network-module.html">Titanium.Network</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Platform-module.html">Titanium.Platform</a>																										</li>
+											<li class="selected">
+							<a href="../latest/Titanium.UI-module.html">Titanium.UI</a>													<div class="objects">Objects</div>
+							<ul class="objects">
+															<li class=""><a href="../latest/Titanium.UI.2DMatrix-object.html">2DMatrix</a></li>
+															<li class=""><a href="../latest/Titanium.UI.3DMatrix-object.html">3DMatrix</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ActivityIndicator-object.html">ActivityIndicator</a></li>
+															<li class=""><a href="../latest/Titanium.UI.AlertDialog-object.html">AlertDialog</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Animation-object.html">Animation</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Button-object.html">Button</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ButtonBar-object.html">ButtonBar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.CoverFlowView-object.html">CoverFlowView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.DashboardItem-object.html">DashboardItem</a></li>
+															<li class=""><a href="../latest/Titanium.UI.DashboardView-object.html">DashboardView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.EmailDialog-object.html">EmailDialog</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ImageView-object.html">ImageView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Label-object.html">Label</a></li>
+															<li class=""><a href="../latest/Titanium.UI.OptionDialog-object.html">OptionDialog</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Picker-object.html">Picker</a></li>
+															<li class=""><a href="../latest/Titanium.UI.PickerColumn-object.html">PickerColumn</a></li>
+															<li class=""><a href="../latest/Titanium.UI.PickerRow-object.html">PickerRow</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ProgressBar-object.html">ProgressBar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ScrollView-object.html">ScrollView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ScrollableView-object.html">ScrollableView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.SearchBar-object.html">SearchBar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Slider-object.html">Slider</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Switch-object.html">Switch</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Tab-object.html">Tab</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TabGroup-object.html">TabGroup</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TabbedBar-object.html">TabbedBar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TableView-object.html">TableView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TableViewRow-object.html">TableViewRow</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TableViewSection-object.html">TableViewSection</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TextArea-object.html">TextArea</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TextField-object.html">TextField</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Toolbar-object.html">Toolbar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.View-object.html">View</a></li>
+															<li class=""><a href="../latest/Titanium.UI.WebView-object.html">WebView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Window-object.html">Window</a></li>
+								
+							</ul>
+																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Android-module.html">Titanium.UI.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Clipboard-module.html">Titanium.UI.Clipboard</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iOS-module.html">Titanium.UI.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPad-module.html">Titanium.UI.iPad</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPhone-module.html">Titanium.UI.iPhone</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Utils-module.html">Titanium.Utils</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.XML-module.html">Titanium.XML</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Yahoo-module.html">Titanium.Yahoo</a>																										</li>
+						
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="clear"></div>
+	
+	</div> 
+
+</div> 
+
+<footer>
+	<div id="footer">
+		<div class="squeeze">
+			<div style="height:200px;">
+				<footer>
+	<div id="footer">
+		<div class="squeeze">
+	 
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/products/" title="Products">Products</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/" title="Titanium Platform">Titanium Platform</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/titanium-architecture/" title="Titanium Architecture">Titanium Architecture</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-mobile/" title="Titanium Mobile">Titanium Mobile</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-desktop/" title="Titanium Desktop">Titanium Desktop</a></li>
+					<li><a href="http://www.appcelerator.com/products/native/" title="The Native Advantage">The Native Advantage</a></li>
+					<li><a href="http://www.appcelerator.com/products/download/" title="Download Titanium">Download Titanium</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/partners/" title="Partners">Partners</a></li>
+					<li><a href="http://www.appcelerator.com/partners/case-studies/" title="Case Studies">Case Studies</a></li>
+					<li><a href="http://www.appcelerator.com/partners/testimonials/" title="Testimonials">Testimonials</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/resources/" title="Resources">Resources</a></li>
+					<li><a href="http://www.appcelerator.com/resources/app-u/" title="Appcelerator University">Appcelerator University</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/showcase/" title="Showcase">Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/applications-showcase/" title="Applications Showcase">Applications Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/videos/" title="Videos">Videos</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/company/" title="About Appcelerator, Inc.">About Appcelerator, Inc.</a></li>
+					<li><a href="http://www.appcelerator.com/company/leadership-team/" title="Leadership Team">Leadership Team</a></li>
+					<li><a href="http://www.appcelerator.com/company/investors-board/" title="Investors &#038; Board">Investors &#038; Board</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/" title="News &#038; Press">News &#038; Press</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/press-releases/" title="Press Releases">Press Releases</a></li>
+					<li><a href="http://www.appcelerant.com" title="Appcelerant Blog">Appcelerant Blog</a></li>
+					<li><a href="http://www.appcelerator.com/company/contact-us/" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</div> 
+
+			<div class="clear"></div>
+			
+			<div class="legal">
+				<a href="http://www.appcelerator.com"><img style="float:left; margin-right:15px" src="/assets/img/a-logo.png" alt="Appcelerator" /></a>
+				<a href="http://www.appcelerant.com">Blog</a> |  
+				<a href="http://twitter.com/appcelerator">Twitter</a> |
+				<a href="http://www.appcelerator.com/company/privacy">Privacy Policy</a> |
+				<a href="http://www.appcelerator.com/company/terms-and-conditions-of-use">Terms and Conditions</a>
+				<br />
+				&copy; 2008-2011 Appcelerator Inc. All rights reserved.  Appcelerator is a registered trademark.
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+
+<script src="http://munchkin.marketo.net/munchkin.js"></script>
+<script>try { mktoMunchkin("636-NHJ-871"); } catch (err) {}</script>
+<script>
+var _qoptions={qacct:"p-4aHbaizUurMCQ"},
+	_gaq=[['_setAccount','UA-5155164-1'],['_setDomainName','none'],['_setAllowLinker',true],['_setAllowAnchor',true],['_setAllowHash',false],['_addIgnoredOrganic',document.location.host],['_initData'],['_trackPageview']];
+
+(function(d) {
+function load(u){var s=d.getElementsByTagName('script')[0],sc=d.createElement('script');sc.async=true;sc.src=u;s.parentNode.insertBefore(sc,s);}
+
+load('http://www.google-analytics.com/ga.js');
+load('http://api.appcelerator.net/p/beacon.js');
+load('http://api.appcelerator.net/p/analytics.js');
+load('http://edge.quantserve.com/quant.js');
+
+function cc(l,n,s){if(!l||!n||!s||l==''||n==''||s==''){return'-'}var i,i2,i3,c='1';i=l.indexOf(n);i3=n.indexOf('=')+1;if(i>-1){i2=l.indexOf(s,i);if(i2<0){i2=l.length}c=l.substring((i+i3),i2)}return c};
+window._gaToMarketo=function(){var gaCookie=cc(document.cookie,'__utmz=',';');return {cf_campaign:cc(gaCookie,'utmccn=','|'),cf_source:cc(gaCookie,'utmsrc=','|'),cf_medium:cc(gaCookie,'utmcmd=','|'),cf_content:cc(gaCookie,'utmcct=','|'),cf_keyword:cc(gaCookie,'utmctr=','|'),cf_visits:cc(document.cookie,'__utma=',';').split('.')[5]}};
+jQuery(function(){jQuery('form[action*=sub-webform]').each(function(){var _form=this;jQuery.each(_gaToMarketo(),function(k,v){jQuery(_form).append('<input type="hidden" name="'+k+'" value="'+v+'" />')})})})
+})(document);
+</script>
+<noscript><img src="http://pixel.quantserve.com/pixel/p-4aHbaizUurMCQ.gif" style="border:0;display:none;" height="1" width="1" alt="Quantcast"/></noscript>
+</body>
+</html>

@@ -1,0 +1,1249 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Appcelerator Developer Center - API for Titanium.UI (version 1.6.2)</title>
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen" />
+<link rel="image_src" href="/assets/img/appc_icon.jpg"/>
+<meta property="og:site_name" content="Appcelerator Developer Center"/> 
+<meta property="og:image" content="/assets/img/appc_icon.jpg"/> 
+<script src="/assets/js/jquery-1.4.min.js" type="text/javascript"></script>
+	<style>
+	.deprecated
+	{
+		border:1px solid #900;
+		color: #D8000C;
+		background-color: #FFBABA;
+		padding:10px;
+		margin-top:10px;
+		margin-bottom:30px;
+	}
+	.apidoc .namespace_type
+	{
+		font-size:11px;
+		color:#aaa;
+		position:relative;
+		top:-20px;
+	}
+	.apidoc .since
+	{
+		font-size:11px;
+		color:#222;
+		position:absolute;
+		top:30px;
+		right:10px;
+	}
+	.apidoc  table
+	{
+		margin-top:10px;
+		border:1px solid #999;
+		width:99%;
+	}
+	.apidoc table.event
+	{
+		border:1px solid #ccc;
+	}
+	.apidoc table.event td
+	{
+		background-color:#eff;
+	}
+	.apidoc table.event td.name
+	{
+		font-weight:bold;
+		width:100px;
+	}
+	.apidoc table td.type
+	{
+		width:20px;
+	}
+	.apidoc table td
+	{
+		padding:4px;
+		vertical-align:top;
+		border-bottom:1px solid #ddd;
+	}
+	.apidoc table tr:last-child td
+	{
+		border-bottom:none !important;
+	}
+	.apidoc table td.name
+	{
+		font-weight:bold;
+	}
+	.apidoc table th
+	{
+		background-color:#aaa;
+		text-align:left;
+		padding:4px;
+		font-weight:bold;
+	}
+	.apidoc h3
+	{
+		margin-top:20px;
+	}
+	#sidenav .methods, #sidenav .properties, #sidenav .objects
+	{
+		font-size:10px;
+		margin-top:10px;
+		margin-left:0px;
+	}
+	li.subselected a
+	{
+		border-bottom:1px solid #9aa;
+	}
+	.apidoc
+	{
+		position:relative;
+	}
+	div.platforms
+	{
+		position:absolute;
+		right:12px;
+		top:10px;
+	}
+	div.platforms span.android
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/android12x12.png);
+		background-repeat:no-repeat;
+	}
+	div.platforms span.iphone
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/iphone12x12.png);
+		background-repeat:no-repeat;
+		top:-1px;
+		position:relative;
+	}
+	div.signature
+	{
+		margin-bottom:20px;
+		color:rgb(153,0,0);
+		font-weight:bold;
+	}
+	.apidoc h1
+	{
+		text-shadow: 2px 2px 2px #bbb;
+	}
+	#search.blur
+	{
+		color:#aaa;
+	}
+	</style>
+</head>
+<body>
+
+<header role="banner">
+	<div id="header">
+		<div class="titlebarLogo">
+	<h1><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h1>
+	<div class="arrow"></div>
+</div>
+<div class="squeeze">
+	<h2><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h2>
+	<nav>
+		<div class="login">
+							<a href="https://my.appcelerator.com/auth/signup">Signup</a> | <a href="https://my.appcelerator.com/auth/login?redirect_to=http%3A%2F%2Fdeveloper.appcelerator.com%2Fapidoc%2Fmobile%2Flatest%2FTitanium.UI">Login</a>
+						<a class="last" href="http://www.appcelerator.com" title="Appcelerator.com"><img src="/assets/img/dotcom.png" style="position:relative;top:4px;left:8px;" alt="Appcelerator"/></a>
+		</div>
+	</nav>
+</div>
+	</div>
+	<div id="nav">
+		<div class="squeeze">
+			<nav>
+	<div class="primary">
+			<div class="  ">
+			<a href="/get_started" title="Get Started">Get Started</a>
+		</div>
+			<div class="  ">
+			<a href="/questions" title="Q&amp;A">Q&amp;A</a>
+		</div>
+			<div class="  ">
+			<a href="/documentation" title="Docs">Docs</a>
+		</div>
+			<div class="  ">
+			<a href="http://training.appcelerator.com/" title="AppU Training">AppU Training</a>
+		</div>
+			<div class="  ">
+			<a href="/devlink" title="DevLink">DevLink</a>
+		</div>
+			<div class="  last ">
+			<a href="/get_help" title="Get Help">Get Help</a>
+		</div>
+			<div class="clear"></div>
+	</div>
+</nav>
+<nav>
+	<div class="secondary">
+					<a class="last" title="Developer Blog" href="/blog">Developer Blog</a>
+			</div>
+</nav>
+		</div>
+	</div>
+</header>
+
+<div id="contentBG">
+
+	<div class="dropshadow"></div>
+	
+	<div class="squeeze">
+	
+		<div class="contentWithLeftSidebar">
+			<div class="apidoc">
+				<div class="apidoc_container apidoc_module">
+
+<h1 class="namespace">Titanium.UI</h1>
+<div class="namespace_type">submodule of <a href="../latest/Titanium-module.html">Titanium</a></div>
+
+<div class="platforms">
+<span class="android">&nbsp;&nbsp;&nbsp;</span>
+<span class="iphone">&nbsp;&nbsp;&nbsp;</span>
+<span class="ipad">&nbsp;&nbsp;&nbsp;</span>
+<div class="clear"></div>
+<span class="since">0.4</span>
+</div>
+
+<div class="description">
+<p>The main <a href="../latest/Titanium.UI-module.html">Titanium.UI</a> module.  The UI module is responsible for native user-interface components and interaction inside Titanium.  The goal of the UI module is to provide a native experience along with native performance by compiling Javascript code into their native counterparts as part of the build process. </p>
+</div>
+
+<h3>Objects</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.2DMatrix-object.html">Titanium.UI.2DMatrix</a></td>
+	<td class="description"><p>The 2DMatrix is created by <a href="../latest/Titanium.UI.create2DMatrix-method.html">Titanium.UI.create2DMatrix</a>.  The 2D Matrix is an object for holding values for an affine transformation matrix. A 2D matrix is used to rotate, scale, translate, or skew the objects in a two-dimensional space. A 2D matrix is represented by a 3 by 3 matrix. Because the third column is always (0,0,1), the data structure contains values for only the first two columns.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.3DMatrix-object.html">Titanium.UI.3DMatrix</a></td>
+	<td class="description"><p>The 3DMatrix is created by <a href="../latest/Titanium.UI.create3DMatrix-method.html">Titanium.UI.create3DMatrix</a>.  The 3D Matrix is an object for holding values for an affine transformation matrix. A 3D matrix is used to rotate, scale, translate, or skew the objects in a three-dimensional space. A 3D matrix is represented by a 4 by 4 matrix. Because the forth column is always (0,0,1), the data structure contains values for only the first three columns.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.ActivityIndicator-object.html">Titanium.UI.ActivityIndicator</a></td>
+	<td class="description"><p>An Activity Indicator is created by the method <a href="../latest/Titanium.UI.createActivityIndicator-method.html">Titanium.UI.createActivityIndicator</a>.  An activity indicator can be used to show the progress of an operation in the UI to let the user know some action is taking place.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.AlertDialog-object.html">Titanium.UI.AlertDialog</a></td>
+	<td class="description"><p>The Alert Dialog is created by <a href="../latest/Titanium.UI.createAlertDialog-method.html">Titanium.UI.createAlertDialog</a> and allows you to show a modal application dialog.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Animation-object.html">Titanium.UI.Animation</a></td>
+	<td class="description"><p>The Animation object is used for specifying lower-level animation properties and more low-level control of events during an animation. The Animation is created by the method <a href="../latest/Titanium.UI.createAnimation-method.html">Titanium.UI.createAnimation</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Button-object.html">Titanium.UI.Button</a></td>
+	<td class="description"><p>A Button is created by the method <a href="../latest/Titanium.UI.createButton-method.html">Titanium.UI.createButton</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.ButtonBar-object.html">Titanium.UI.ButtonBar</a></td>
+	<td class="description"><p>A Button Bar is created by the method <a href="../latest/Titanium.UI.createButtonBar-method.html">Titanium.UI.createButtonBar</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.CoverFlowView-object.html">Titanium.UI.CoverFlowView</a></td>
+	<td class="description"><p>The Cover Flow view is container for showing  animated, three dimensional images in a nice UI. The Cover Flow view is created by the method <a href="../latest/Titanium.UI.createCoverFlowView-method.html">Titanium.UI.createCoverFlowView</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.DashboardItem-object.html">Titanium.UI.DashboardItem</a></td>
+	<td class="description"><p>An item that represents a visual icon in the <a href="../latest/Titanium.UI.DashboardView-object.html">Titanium.UI.DashboardView</a>. The Dashboard Item is created by the method <a href="../latest/Titanium.UI.createDashboardItem-method.html">Titanium.UI.createDashboardItem</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.DashboardView-object.html">Titanium.UI.DashboardView</a></td>
+	<td class="description"><p>The Dashboard View provides a view that supports the ability to have Springboard-like view of icons which can be reordered by dragging and can contain multiple pages of icons in a scrollable view. The Dashboard View is created by the method <a href="../latest/Titanium.UI.createDashboardView-method.html">Titanium.UI.createDashboardView</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.EmailDialog-object.html">Titanium.UI.EmailDialog</a></td>
+	<td class="description"><p>The Email Dialog is created by <a href="../latest/Titanium.UI.createEmailDialog-method.html">Titanium.UI.createEmailDialog</a> and allows you to send in application emails on behalf of the application user.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.ImageView-object.html">Titanium.UI.ImageView</a></td>
+	<td class="description"><p>An Image View is used to display an image or a series of images in an animation. The Image View is created by the method <a href="../latest/Titanium.UI.createImageView-method.html">Titanium.UI.createImageView</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Label-object.html">Titanium.UI.Label</a></td>
+	<td class="description"><p>A Label is created by the method <a href="../latest/Titanium.UI.createLabel-method.html">Titanium.UI.createLabel</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.OptionDialog-object.html">Titanium.UI.OptionDialog</a></td>
+	<td class="description"><p>The Option Dialog is created by <a href="../latest/Titanium.UI.createOptionDialog-method.html">Titanium.UI.createOptionDialog</a> and allows you to show a modal dialog of one or more options to the user.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Picker-object.html">Titanium.UI.Picker</a></td>
+	<td class="description"><p>A Picker is created by the method <a href="../latest/Titanium.UI.createPicker.html">Titanium.UI.createPicker</a>.  A Picker can be used to select one or more fixed values.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.PickerColumn-object.html">Titanium.UI.PickerColumn</a></td>
+	<td class="description"><p>The picker row object created by <a href="../latest/Titanium.UI.createPickerColumn.html">Titanium.UI.createPickerColumn</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.PickerRow-object.html">Titanium.UI.PickerRow</a></td>
+	<td class="description"><p>The picker row object created by <a href="../latest/Titanium.UI.createPickerRow.html">Titanium.UI.createPickerRow</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.ProgressBar-object.html">Titanium.UI.ProgressBar</a></td>
+	<td class="description"><p>A Progress Bar is created by the method <a href="../latest/Titanium.UI.createProgressBar-method.html">Titanium.UI.createProgressBar</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.ScrollView-object.html">Titanium.UI.ScrollView</a></td>
+	<td class="description"><p>A Scroll View is used to create a scrollable region of content.  Views added to the Scroll View will be scrolled based on the content size of the Scroll View. The Scroll View is created by the method <a href="../latest/Titanium.UI.createScrollView-method.html">Titanium.UI.createScrollView</a>. Note: In Android, Scroll Views can only scroll in one direction, either vertical or horizontal, but not both at the same time. See the <a href="../latest/Titanium.UI.ScrollView.scrollType-property.html">Titanium.UI.ScrollView.scrollType</a> property</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.ScrollableView-object.html">Titanium.UI.ScrollableView</a></td>
+	<td class="description"><p>The Scrollable View provides a view that supports horizontal scrolling on one or more views in a gesture motion.  The Scrollable View also optionally supports a visual paging control to indicate the page that the view is visible. The Scrollable View is created by the method <a href="../latest/Titanium.UI.createScrollableView-method.html">Titanium.UI.createScrollableView</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.SearchBar-object.html">Titanium.UI.SearchBar</a></td>
+	<td class="description"><p>A Search Bar is created by the method <a href="../latest/Titanium.UI.createSearchBar-method.html">Titanium.UI.createSearchBar</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Slider-object.html">Titanium.UI.Slider</a></td>
+	<td class="description"><p>A Slider is created by the method <a href="../latest/Titanium.UI.createSlider-method.html">Titanium.UI.createSlider</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Switch-object.html">Titanium.UI.Switch</a></td>
+	<td class="description"><p>A Switch is created by the method <a href="../latest/Titanium.UI.createSwitch-method.html">Titanium.UI.createSwitch</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Tab-object.html">Titanium.UI.Tab</a></td>
+	<td class="description"><p>A TabGroup Tab instance.  Each Tab instance maintains a stack of tab windows. Only one window within in the Tab can be visible at a time.  When a window is closed, either by the user or by code, the window is removed from the stack, make the previous window visible. The root tab window cannot be removed. The Tab Group is created by the method <a href="../latest/Titanium.UI.createTab-method.html">Titanium.UI.createTab</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.TabGroup-object.html">Titanium.UI.TabGroup</a></td>
+	<td class="description"><p>The Tab Group allows you to manage a tabbed UI of one or more windows. The Tab Group is created by the method <a href="../latest/Titanium.UI.createTabGroup-method.html">Titanium.UI.createTabGroup</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.TabbedBar-object.html">Titanium.UI.TabbedBar</a></td>
+	<td class="description"><p>A Tabbed Bar is created by the method <a href="../latest/Titanium.UI.createTabbedBar-method.html">Titanium.UI.createTabbedBar</a>. The difference between the Tabbed Bar and the Button Bar is that the tabbed bar visually maintains a state (visually distinguished as a pressed or selected look).</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.TableView-object.html">Titanium.UI.TableView</a></td>
+	<td class="description"><p>A Table View allows you to create a scrollable table of content in a list-based fashion. The Table View is created by the method <a href="../latest/Titanium.UI.createTableView-method.html">Titanium.UI.createTableView</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.TableViewRow-object.html">Titanium.UI.TableViewRow</a></td>
+	<td class="description"><p>A TableView row object created by the method <a href="../latest/Titanium.UI.createTableViewRow-method.html">Titanium.UI.createTableViewRow</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.TableViewSection-object.html">Titanium.UI.TableViewSection</a></td>
+	<td class="description"><p>A TableView section object created by the method <a href="../latest/Titanium.UI.createTableViewSection-method.html">Titanium.UI.createTableViewSection</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.TextArea-object.html">Titanium.UI.TextArea</a></td>
+	<td class="description"><p>A Text Area is created by the method <a href="../latest/Titanium.UI.createTextArea-method.html">Titanium.UI.createTextArea</a>. The Text Area is a multiline field.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.TextField-object.html">Titanium.UI.TextField</a></td>
+	<td class="description"><p>A Text Area is created by the method <a href="../latest/Titanium.UI.createTextField-method.html">Titanium.UI.createTextField</a>. The Text Field is a single line field.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Toolbar-object.html">Titanium.UI.Toolbar</a></td>
+	<td class="description"><p>A Toolbar is created by the method <a href="../latest/Titanium.UI.createToolbar-method.html">Titanium.UI.createToolbar</a>.  A Toolbar can be placed at the bottom of a window and contain buttons.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.View-object.html">Titanium.UI.View</a></td>
+	<td class="description"><p>The View is an empty drawing surface or container. The View is created by the method <a href="../latest/Titanium.UI.createView-method.html">Titanium.UI.createView</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.WebView-object.html">Titanium.UI.WebView</a></td>
+	<td class="description"><p>The Web View allows you to open an HTML5 based view which can load either local or remote content. The content can be any valid web content such as HTML, PDF, SVG or other WebKit supported content types. The Web View is created by the method <a href="../latest/Titanium.UI.createWebView-method.html">Titanium.UI.createWebView</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.Window-object.html">Titanium.UI.Window</a></td>
+	<td class="description"><p>The Window is an empty drawing surface or container. The Window is created by the method <a href="../latest/Titanium.UI.createWindow-method.html">Titanium.UI.createWindow</a>. Unlike <a href="../latest/Titanium.UI.View-object.html">Views</a>, Windows can be opened and closed and can have special display properties such as <tt>fullscreen</tt> or <tt>modal</tt>.</p></td>
+</tr>
+</table>
+
+
+<h3>Methods</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.addEventListener-method.html">addEventListener</a></td>
+	<td class="description">add an event listener for the instance to receive view triggered events</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.create2DMatrix-method.html">create2DMatrix</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.2DMatrix-object.html">Titanium.UI.2DMatrix</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.create3DMatrix-method.html">create3DMatrix</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.3DMatrix-object.html">Titanium.UI.3DMatrix</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createActivityIndicator-method.html">createActivityIndicator</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.ActivityIndicator-object.html">Titanium.UI.ActivityIndicator</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createAlertDialog-method.html">createAlertDialog</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.AlertDialog-object.html">Titanium.UI.AlertDialog</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createAnimation-method.html">createAnimation</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.Animation-object.html">Titanium.UI.Animation</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createButton-method.html">createButton</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.Button-object.html">Titanium.UI.Button</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createButtonBar-method.html">createButtonBar</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.ButtonBar-object.html">Titanium.UI.ButtonBar</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createCoverFlowView-method.html">createCoverFlowView</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.CoverFlowView-object.html">Titanium.UI.CoverFlowView</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createDashboardItem-method.html">createDashboardItem</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.DashboardItem-object.html">Titanium.UI.DashboardItem</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createDashboardView-method.html">createDashboardView</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.DashboardView-object.html">Titanium.UI.DashboardView</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createEmailDialog-method.html">createEmailDialog</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.EmailDialog-object.html">Titanium.UI.EmailDialog</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createImageView-method.html">createImageView</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.ImageView-object.html">Titanium.UI.ImageView</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createLabel-method.html">createLabel</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.Label-object.html">Titanium.UI.Label</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createOptionDialog-method.html">createOptionDialog</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.OptionDialog-object.html">Titanium.UI.OptionDialog</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createPicker-method.html">createPicker</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.Picker-object.html">Titanium.UI.Picker</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createPickerColumn-method.html">createPickerColumn</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.PickerColumn-object.html">Titanium.UI.PickerColumn</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createPickerRow-method.html">createPickerRow</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.PickerRow-object.html">Titanium.UI.PickerRow</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createProgressBar-method.html">createProgressBar</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.ProgressBar-object.html">Titanium.UI.ProgressBar</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createScrollView-method.html">createScrollView</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.ScrollView-object.html">Titanium.UI.ScrollView</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createScrollableView-method.html">createScrollableView</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.ScrollableView-object.html">Titanium.UI.ScrollableView</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createSearchBar-method.html">createSearchBar</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.SearchBar-object.html">Titanium.UI.SearchBar</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createSlider-method.html">createSlider</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.Slider-object.html">Titanium.UI.Slider</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createSwitch-method.html">createSwitch</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.Switch-object.html">Titanium.UI.Switch</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createTab-method.html">createTab</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.Tab-object.html">Titanium.UI.Tab</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createTabGroup-method.html">createTabGroup</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.TabGroup-object.html">Titanium.UI.TabGroup</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createTabbedBar-method.html">createTabbedBar</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.TabbedBar-object.html">Titanium.UI.TabbedBar</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createTableView-method.html">createTableView</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.TableView-object.html">Titanium.UI.TableView</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createTableViewRow-method.html">createTableViewRow</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.TableViewRow-object.html">Titanium.UI.TableViewRow</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createTableViewSection-method.html">createTableViewSection</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.TableViewSection-object.html">Titanium.UI.TableViewSection</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createTextArea-method.html">createTextArea</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.TextArea-object.html">Titanium.UI.TextArea</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createTextField-method.html">createTextField</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.TextField-object.html">Titanium.UI.TextField</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createToolbar-method.html">createToolbar</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.Toolbar-object.html">Titanium.UI.Toolbar</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createView-method.html">createView</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.View-object.html">Titanium.UI.View</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createWebView-method.html">createWebView</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.WebView-object.html">Titanium.UI.WebView</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.createWindow-method.html">createWindow</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.UI.Window-object.html">Titanium.UI.Window</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.fireEvent-method.html">fireEvent</a></td>
+	<td class="description">fire a synthesized event to the views listener</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.UI.removeEventListener-method.html">removeEventListener</a></td>
+	<td class="description">remove a previously added event listener</td>
+</tr>
+</table>
+
+<h3>Properties</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name">ANIMATION_CURVE_EASE_IN</td>
+	<td class="type">int</td>
+	<td class="description"><p>animation curve constant</p></td>
+</tr>
+<tr>
+	<td class="name">ANIMATION_CURVE_EASE_IN_OUT</td>
+	<td class="type">int</td>
+	<td class="description"><p>animation curve constant</p></td>
+</tr>
+<tr>
+	<td class="name">ANIMATION_CURVE_EASE_OUT</td>
+	<td class="type">int</td>
+	<td class="description"><p>animation curve constant</p></td>
+</tr>
+<tr>
+	<td class="name">ANIMATION_CURVE_LINEAR</td>
+	<td class="type">int</td>
+	<td class="description"><p>animation curve constant</p></td>
+</tr>
+<tr>
+	<td class="name">AUTODETECT_ADDRESS</td>
+	<td class="type">int</td>
+	<td class="description"><p>text autodetection constant (iOS 4.0+)</p></td>
+</tr>
+<tr>
+	<td class="name">AUTODETECT_ALL</td>
+	<td class="type">int</td>
+	<td class="description"><p>text autodetection constant (iOS)</p></td>
+</tr>
+<tr>
+	<td class="name">AUTODETECT_CALENDAR</td>
+	<td class="type">int</td>
+	<td class="description"><p>text autodetection constant (iOS 4.0+)</p></td>
+</tr>
+<tr>
+	<td class="name">AUTODETECT_LINK</td>
+	<td class="type">int</td>
+	<td class="description"><p>text autodetection constant (iOS)</p></td>
+</tr>
+<tr>
+	<td class="name">AUTODETECT_NONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>text autodetection constant (iOS)</p></td>
+</tr>
+<tr>
+	<td class="name">AUTODETECT_PHONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>text autodetection constant (iOS)</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_CLEAR</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_COLOR</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_COLOR_BURN</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_COLOR_DODGE</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_COPY</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_DARKEN</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_DESTINATION_ATOP</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_DESTINATION_IN</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_DESTINATION_OUT</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_DESTINATION_OVER</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_DIFFERENCE</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_EXCLUSION</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_HARD_LIGHT</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_HUE</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_LIGHTEN</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_LUMINOSITY</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_MULTIPLY</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_NORMAL</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_OVERLAY</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_PLUS_DARKER</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_PLUS_LIGHTER</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_SATURATION</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_SCREEN</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_SOFT_LIGHT</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_SOURCE_ATOP</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_SOURCE_IN</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_SOURCE_OUT</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">BLEND_MODE_XOR</td>
+	<td class="type">int</td>
+	<td class="description"><p>image mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">FACE_DOWN</td>
+	<td class="type">int</td>
+	<td class="description"><p>orientation constant</p></td>
+</tr>
+<tr>
+	<td class="name">FACE_UP</td>
+	<td class="type">int</td>
+	<td class="description"><p>orientation constant</p></td>
+</tr>
+<tr>
+	<td class="name">INPUT_BORDERSTYLE_BEZEL</td>
+	<td class="type">int</td>
+	<td class="description"><p>input border style constant</p></td>
+</tr>
+<tr>
+	<td class="name">INPUT_BORDERSTYLE_LINE</td>
+	<td class="type">int</td>
+	<td class="description"><p>input border style constant</p></td>
+</tr>
+<tr>
+	<td class="name">INPUT_BORDERSTYLE_NONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>input border style constant</p></td>
+</tr>
+<tr>
+	<td class="name">INPUT_BORDERSTYLE_ROUNDED</td>
+	<td class="type">int</td>
+	<td class="description"><p>input border style constant</p></td>
+</tr>
+<tr>
+	<td class="name">INPUT_BUTTONMODE_ALWAYS</td>
+	<td class="type">int</td>
+	<td class="description"><p>input button mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">INPUT_BUTTONMODE_NEVER</td>
+	<td class="type">int</td>
+	<td class="description"><p>input button mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">INPUT_BUTTONMODE_ONBLUR</td>
+	<td class="type">int</td>
+	<td class="description"><p>input button mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">INPUT_BUTTONMODE_ONFOCUS</td>
+	<td class="type">int</td>
+	<td class="description"><p>input button mode constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_APPEARANCE_ALERT</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard appearance constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_APPEARANCE_DEFAULT</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard appearance constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_ASCII</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_DEFAULT</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_EMAIL</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_NAMEPHONE_PAD</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_NUMBERS_PUNCTUATION</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_NUMBER_PAD</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_PHONE_PAD</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard constant</p></td>
+</tr>
+<tr>
+	<td class="name">KEYBOARD_URL</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield keyboard constant</p></td>
+</tr>
+<tr>
+	<td class="name">LANDSCAPE_LEFT</td>
+	<td class="type">int</td>
+	<td class="description"><p>orientation (home button on left) constant</p></td>
+</tr>
+<tr>
+	<td class="name">LANDSCAPE_RIGHT</td>
+	<td class="type">int</td>
+	<td class="description"><p>orientation (home button on right) constant</p></td>
+</tr>
+<tr>
+	<td class="name">NOTIFICATION_DURATION_LONG</td>
+	<td class="type">int</td>
+	<td class="description"><p>Duration of the notification</p></td>
+</tr>
+<tr>
+	<td class="name">NOTIFICATION_DURATION_SHORT</td>
+	<td class="type">int</td>
+	<td class="description"><p>Duration of the notification</p></td>
+</tr>
+<tr>
+	<td class="name">PICKER_TYPE_COUNT_DOWN_TIMER</td>
+	<td class="type">int</td>
+	<td class="description"><p>picker type constant</p></td>
+</tr>
+<tr>
+	<td class="name">PICKER_TYPE_DATE</td>
+	<td class="type">int</td>
+	<td class="description"><p>picker type constant</p></td>
+</tr>
+<tr>
+	<td class="name">PICKER_TYPE_DATE_AND_TIME</td>
+	<td class="type">int</td>
+	<td class="description"><p>picker type constant</p></td>
+</tr>
+<tr>
+	<td class="name">PICKER_TYPE_PLAIN</td>
+	<td class="type">int</td>
+	<td class="description"><p>picker type constant</p></td>
+</tr>
+<tr>
+	<td class="name">PICKER_TYPE_TIME</td>
+	<td class="type">int</td>
+	<td class="description"><p>picker type constant</p></td>
+</tr>
+<tr>
+	<td class="name">PORTRAIT</td>
+	<td class="type">int</td>
+	<td class="description"><p>orientation (home button on bottom) constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_DEFAULT</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_DONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_EMERGENCY_CALL</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_GO</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_GOOGLE</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_JOIN</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_NEXT</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_ROUTE</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_SEARCH</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_SEND</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">RETURNKEY_YAHOO</td>
+	<td class="type">int</td>
+	<td class="description"><p>textfield return key constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_ALIGNMENT_CENTER</td>
+	<td class="type">int</td>
+	<td class="description"><p>text align constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_ALIGNMENT_LEFT</td>
+	<td class="type">int</td>
+	<td class="description"><p>text align constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_ALIGNMENT_RIGHT</td>
+	<td class="type">int</td>
+	<td class="description"><p>text align constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_AUTOCAPITALIZATION_ALL</td>
+	<td class="type">int</td>
+	<td class="description"><p>text capitalization constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_AUTOCAPITALIZATION_NONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>text capitalization constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_AUTOCAPITALIZATION_SENTENCES</td>
+	<td class="type">int</td>
+	<td class="description"><p>text capitalization constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_AUTOCAPITALIZATION_WORDS</td>
+	<td class="type">int</td>
+	<td class="description"><p>text capitalization constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_VERTICAL_ALIGNMENT_BOTTOM</td>
+	<td class="type">int</td>
+	<td class="description"><p>text vertical align constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_VERTICAL_ALIGNMENT_CENTER</td>
+	<td class="type">int</td>
+	<td class="description"><p>text vertical align constant</p></td>
+</tr>
+<tr>
+	<td class="name">TEXT_VERTICAL_ALIGNMENT_TOP</td>
+	<td class="type">int</td>
+	<td class="description"><p>text vertical align constant</p></td>
+</tr>
+<tr>
+	<td class="name">UNKNOWN</td>
+	<td class="type">int</td>
+	<td class="description"><p>orientation constant</p></td>
+</tr>
+<tr>
+	<td class="name">UPSIDE_PORTRAIT</td>
+	<td class="type">int</td>
+	<td class="description"><p>orientation (home button on top) constant</p></td>
+</tr>
+<tr>
+	<td class="name">backgroundColor</td>
+	<td class="type">string</td>
+	<td class="description"><p>this sets the background color of the master UIView (when there are no windows/tab groups on it)</p></td>
+</tr>
+<tr>
+	<td class="name">backgroundImage</td>
+	<td class="type">string</td>
+	<td class="description"><p>path/url to an image file for setting a background for the master UIView (when there are no windows/tab groups on it).</p></td>
+</tr>
+</table>
+
+<h3>Events</h3>
+This module has no events
+
+<h3>Notes</h3>
+
+<h3 id="design">Design</h3>
+<p>The UI module is broken down into 3 major area:</p>
+<ul>
+<li><strong>Views</strong> - <a href="../latest/Titanium.UI.View.html">Views</a> are containers that host visual elements such as controls or other views.  Views can have their properties customized, such as their border color and radius, can fire events such as swipe events or touches, and can optionally contain a hierarchy or other views as children. In Titanium, most views are specialized to perform both a visual function and set of interaction behaviors such as <a href="../latest/Titanium.UI.TableView.html">Table View</a> or <a href="../latest/Titanium.UI.CoverFlowView.html">Coverflow View</a>.  Views are always named with the suffix <tt>View</tt>.</li>
+<li><strong>Controls</strong> - controls, or sometimes referred as widgets, are visual elements such as <a href="../latest/Titanium.UI.Slider.html">sliders</a>, <a href="../latest/Titanium.UI.Button.html">buttons</a> and <a href="../latest/Titanium.UI.Switch.html">switches</a>. They provide a visual element which has a defined behavior and typical have special configuration and special events.  Controls themselves are views and also inherit a views properties, functions and events.</li>
+<li><strong>Windows</strong> - <a href="../latest/Titanium.UI.Window.html">Windows</a> are typically top-level visual constructs that are the main part of your interface. An application will always have at least one window and windows can take different shapes and sizes, can have display and interaction properties such as fullscreen or modal and can be customized, such as changing their opacity or background color. Windows themselves are views and also inherit a views properties, functions and events. There are a few specialization of Windows such as a <a href="../latest/Titanium.UI.TabGroup.html">Tab Group</a> which offer additional behavior beyond the basic Window.</li>
+</ul>
+<p>Titanium uses the <a href="http://en.wikipedia.org/wiki/Factory_method_pattern">Factory Pattern</a> for constructing objects and a general naming pattern for APIs.  For example, to construct a <a href="../latest/Titanium.UI.AlertDialog.html">Alert Dialog</a>, you call the method <a href="../latest/Titanium.UI.createAlertDialog-method.html">Titanium.UI.createAlertDialog</a>.  To create a <a href="../latest/Titanium.UI.TextArea.html">TextArea</a>, you call the method <a href="../latest/Titanium.UI.createTextArea-method.html">Titanium.UI.createTextArea</a>.  Once an object is created, it will be available until it goes out of scope.</p>
+<h3 id="optimizations">Optimizations</h3>
+<p>UI objects are optimized by Titanium to not be realized into the drawing context and placed into the device UI surface until needed.  That means that you can create UI objects, set their properties and add them to their hierarchy without much worry about memory or performance.  When the native drawing surface needs to render a specific view or control, Titanium will automatically create the view as needed.  Additionally, Titanium is optimized to also release memory once the view is no longer needed, on screen or in low memory situations.  However, it's a good idea to help Titanium along in certain cases where you are no longer using objects.  For example, you should call <tt>close</tt> on a <a href="../latest/Titanium.UI.Window.html">Window</a> instance when you are no longer using it.  You can safely call <tt>open</tt> on the <a href="../latest/Titanium.UI.Window.html">Window</a> again to re-open it.<br>
+</p>
+<h3 id="global_context_and_threading">Global Context and Threading</h3>
+<p>Be careful with the objects that are created in <tt>app.js</tt> but only used once.  Since the <tt>app.js</tt> context is global and generally is not garbage collected until the application exits, you should think about the design of your application as it relates to this fact.  <a href="../latest/Titanium.UI.Window.html">Window</a> objects that are opened up with the <tt>url</tt> property to another Javascript file contain a nice way to decompose your application into smaller units.  The other benefit is that when a <a href="../latest/Titanium.UI.Window.html">Window</a> is closed, its resources can be immediately cleaned up, saving resources such as memory and CPU.  Additionally, <a href="../latest/Titanium.UI.Window.html">Window</a> objects run in a separate Javascript context and Thread. While all UI processing is done on the main UI thread, other processing inside a Window or the <tt>app.js</tt> that does not have UI interaction will run in its own thread.</p>
+<h3 id="portability">Portability</h3>
+<p>Titanium components are designed to be portable across as many platforms as it supports.  However, there are cases where a device either does not support a specific feature or capability or where it support additional functionality.  For cases where the device OS supports capabilities that other platforms do not, we attempt to place those capabilities in a separate namespace, such as <a href="../latest/Titanium.UI.iPhone.html">Titanium.UI.iPhone</a>. However, in cases where the control is in a common namespace and support additional features, we continue to place that functionality directly on the object.</p>
+
+
+
+</div>			</div>
+		</div> 
+	
+		<div class="leftSidebar">
+			<h3>Mobile API Reference</h3>
+			<div style="margin-bottom:10px;">
+				<form method="GET" action="/apidoc/search/mobile/1.6.2">
+					<input class="blur" id="search" type="search" value="search documentation" name="q" style="width:99%"/>
+				</form>
+			</div>
+			<script>
+				$(function()
+				{
+					$('#search').blur(function()
+					{
+						$(this).val('search documentation').addClass('blur');
+					});
+					$('#search').focus(function()
+					{
+						$(this).val('').removeClass('blur');
+					});
+				});
+			</script>
+			<nav>
+				<ul id="sidenav">
+											<li class="">
+							<a href="../latest/Titanium-module.html">Titanium</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.API-module.html">Titanium.API</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Accelerometer-module.html">Titanium.Accelerometer</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Analytics-module.html">Titanium.Analytics</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android-module.html">Titanium.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.Calendar-module.html">Titanium.Android.Calendar</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.NotificationManager-module.html">Titanium.Android.NotificationManager</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App-module.html">Titanium.App</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Android-module.html">Titanium.App.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Properties-module.html">Titanium.App.Properties</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.iOS-module.html">Titanium.App.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Contacts-module.html">Titanium.Contacts</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Database-module.html">Titanium.Database</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Facebook-module.html">Titanium.Facebook</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Filesystem-module.html">Titanium.Filesystem</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Geolocation-module.html">Titanium.Geolocation</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Gesture-module.html">Titanium.Gesture</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Locale-module.html">Titanium.Locale</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Map-module.html">Titanium.Map</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Media-module.html">Titanium.Media</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Network-module.html">Titanium.Network</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Platform-module.html">Titanium.Platform</a>																										</li>
+											<li class="selected">
+							<a href="../latest/Titanium.UI-module.html">Titanium.UI</a>													<div class="objects">Objects</div>
+							<ul class="objects">
+															<li class=""><a href="../latest/Titanium.UI.2DMatrix-object.html">2DMatrix</a></li>
+															<li class=""><a href="../latest/Titanium.UI.3DMatrix-object.html">3DMatrix</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ActivityIndicator-object.html">ActivityIndicator</a></li>
+															<li class=""><a href="../latest/Titanium.UI.AlertDialog-object.html">AlertDialog</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Animation-object.html">Animation</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Button-object.html">Button</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ButtonBar-object.html">ButtonBar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.CoverFlowView-object.html">CoverFlowView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.DashboardItem-object.html">DashboardItem</a></li>
+															<li class=""><a href="../latest/Titanium.UI.DashboardView-object.html">DashboardView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.EmailDialog-object.html">EmailDialog</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ImageView-object.html">ImageView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Label-object.html">Label</a></li>
+															<li class=""><a href="../latest/Titanium.UI.OptionDialog-object.html">OptionDialog</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Picker-object.html">Picker</a></li>
+															<li class=""><a href="../latest/Titanium.UI.PickerColumn-object.html">PickerColumn</a></li>
+															<li class=""><a href="../latest/Titanium.UI.PickerRow-object.html">PickerRow</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ProgressBar-object.html">ProgressBar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ScrollView-object.html">ScrollView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.ScrollableView-object.html">ScrollableView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.SearchBar-object.html">SearchBar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Slider-object.html">Slider</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Switch-object.html">Switch</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Tab-object.html">Tab</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TabGroup-object.html">TabGroup</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TabbedBar-object.html">TabbedBar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TableView-object.html">TableView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TableViewRow-object.html">TableViewRow</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TableViewSection-object.html">TableViewSection</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TextArea-object.html">TextArea</a></li>
+															<li class=""><a href="../latest/Titanium.UI.TextField-object.html">TextField</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Toolbar-object.html">Toolbar</a></li>
+															<li class=""><a href="../latest/Titanium.UI.View-object.html">View</a></li>
+															<li class=""><a href="../latest/Titanium.UI.WebView-object.html">WebView</a></li>
+															<li class=""><a href="../latest/Titanium.UI.Window-object.html">Window</a></li>
+								
+							</ul>
+																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Android-module.html">Titanium.UI.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Clipboard-module.html">Titanium.UI.Clipboard</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iOS-module.html">Titanium.UI.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPad-module.html">Titanium.UI.iPad</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPhone-module.html">Titanium.UI.iPhone</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Utils-module.html">Titanium.Utils</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.XML-module.html">Titanium.XML</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Yahoo-module.html">Titanium.Yahoo</a>																										</li>
+						
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="clear"></div>
+	
+	</div> 
+
+</div> 
+
+<footer>
+	<div id="footer">
+		<div class="squeeze">
+			<div style="height:200px;">
+				<footer>
+	<div id="footer">
+		<div class="squeeze">
+	 
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/products/" title="Products">Products</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/" title="Titanium Platform">Titanium Platform</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/titanium-architecture/" title="Titanium Architecture">Titanium Architecture</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-mobile/" title="Titanium Mobile">Titanium Mobile</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-desktop/" title="Titanium Desktop">Titanium Desktop</a></li>
+					<li><a href="http://www.appcelerator.com/products/native/" title="The Native Advantage">The Native Advantage</a></li>
+					<li><a href="http://www.appcelerator.com/products/download/" title="Download Titanium">Download Titanium</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/partners/" title="Partners">Partners</a></li>
+					<li><a href="http://www.appcelerator.com/partners/case-studies/" title="Case Studies">Case Studies</a></li>
+					<li><a href="http://www.appcelerator.com/partners/testimonials/" title="Testimonials">Testimonials</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/resources/" title="Resources">Resources</a></li>
+					<li><a href="http://www.appcelerator.com/resources/app-u/" title="Appcelerator University">Appcelerator University</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/showcase/" title="Showcase">Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/applications-showcase/" title="Applications Showcase">Applications Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/videos/" title="Videos">Videos</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/company/" title="About Appcelerator, Inc.">About Appcelerator, Inc.</a></li>
+					<li><a href="http://www.appcelerator.com/company/leadership-team/" title="Leadership Team">Leadership Team</a></li>
+					<li><a href="http://www.appcelerator.com/company/investors-board/" title="Investors &#038; Board">Investors &#038; Board</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/" title="News &#038; Press">News &#038; Press</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/press-releases/" title="Press Releases">Press Releases</a></li>
+					<li><a href="http://www.appcelerant.com" title="Appcelerant Blog">Appcelerant Blog</a></li>
+					<li><a href="http://www.appcelerator.com/company/contact-us/" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</div> 
+
+			<div class="clear"></div>
+			
+			<div class="legal">
+				<a href="http://www.appcelerator.com"><img style="float:left; margin-right:15px" src="/assets/img/a-logo.png" alt="Appcelerator" /></a>
+				<a href="http://www.appcelerant.com">Blog</a> |  
+				<a href="http://twitter.com/appcelerator">Twitter</a> |
+				<a href="http://www.appcelerator.com/company/privacy">Privacy Policy</a> |
+				<a href="http://www.appcelerator.com/company/terms-and-conditions-of-use">Terms and Conditions</a>
+				<br />
+				&copy; 2008-2011 Appcelerator Inc. All rights reserved.  Appcelerator is a registered trademark.
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+
+<script src="http://munchkin.marketo.net/munchkin.js"></script>
+<script>try { mktoMunchkin("636-NHJ-871"); } catch (err) {}</script>
+<script>
+var _qoptions={qacct:"p-4aHbaizUurMCQ"},
+	_gaq=[['_setAccount','UA-5155164-1'],['_setDomainName','none'],['_setAllowLinker',true],['_setAllowAnchor',true],['_setAllowHash',false],['_addIgnoredOrganic',document.location.host],['_initData'],['_trackPageview']];
+
+(function(d) {
+function load(u){var s=d.getElementsByTagName('script')[0],sc=d.createElement('script');sc.async=true;sc.src=u;s.parentNode.insertBefore(sc,s);}
+
+load('http://www.google-analytics.com/ga.js');
+load('http://api.appcelerator.net/p/beacon.js');
+load('http://api.appcelerator.net/p/analytics.js');
+load('http://edge.quantserve.com/quant.js');
+
+function cc(l,n,s){if(!l||!n||!s||l==''||n==''||s==''){return'-'}var i,i2,i3,c='1';i=l.indexOf(n);i3=n.indexOf('=')+1;if(i>-1){i2=l.indexOf(s,i);if(i2<0){i2=l.length}c=l.substring((i+i3),i2)}return c};
+window._gaToMarketo=function(){var gaCookie=cc(document.cookie,'__utmz=',';');return {cf_campaign:cc(gaCookie,'utmccn=','|'),cf_source:cc(gaCookie,'utmsrc=','|'),cf_medium:cc(gaCookie,'utmcmd=','|'),cf_content:cc(gaCookie,'utmcct=','|'),cf_keyword:cc(gaCookie,'utmctr=','|'),cf_visits:cc(document.cookie,'__utma=',';').split('.')[5]}};
+jQuery(function(){jQuery('form[action*=sub-webform]').each(function(){var _form=this;jQuery.each(_gaToMarketo(),function(k,v){jQuery(_form).append('<input type="hidden" name="'+k+'" value="'+v+'" />')})})})
+})(document);
+</script>
+<noscript><img src="http://pixel.quantserve.com/pixel/p-4aHbaizUurMCQ.gif" style="border:0;display:none;" height="1" width="1" alt="Quantcast"/></noscript>
+</body>
+</html>

@@ -1,0 +1,1404 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Appcelerator Developer Center - API for Titanium.Android (version 1.6.2)</title>
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen" />
+<link rel="image_src" href="/assets/img/appc_icon.jpg"/>
+<meta property="og:site_name" content="Appcelerator Developer Center"/> 
+<meta property="og:image" content="/assets/img/appc_icon.jpg"/> 
+<script src="/assets/js/jquery-1.4.min.js" type="text/javascript"></script>
+	<style>
+	.deprecated
+	{
+		border:1px solid #900;
+		color: #D8000C;
+		background-color: #FFBABA;
+		padding:10px;
+		margin-top:10px;
+		margin-bottom:30px;
+	}
+	.apidoc .namespace_type
+	{
+		font-size:11px;
+		color:#aaa;
+		position:relative;
+		top:-20px;
+	}
+	.apidoc .since
+	{
+		font-size:11px;
+		color:#222;
+		position:absolute;
+		top:30px;
+		right:10px;
+	}
+	.apidoc  table
+	{
+		margin-top:10px;
+		border:1px solid #999;
+		width:99%;
+	}
+	.apidoc table.event
+	{
+		border:1px solid #ccc;
+	}
+	.apidoc table.event td
+	{
+		background-color:#eff;
+	}
+	.apidoc table.event td.name
+	{
+		font-weight:bold;
+		width:100px;
+	}
+	.apidoc table td.type
+	{
+		width:20px;
+	}
+	.apidoc table td
+	{
+		padding:4px;
+		vertical-align:top;
+		border-bottom:1px solid #ddd;
+	}
+	.apidoc table tr:last-child td
+	{
+		border-bottom:none !important;
+	}
+	.apidoc table td.name
+	{
+		font-weight:bold;
+	}
+	.apidoc table th
+	{
+		background-color:#aaa;
+		text-align:left;
+		padding:4px;
+		font-weight:bold;
+	}
+	.apidoc h3
+	{
+		margin-top:20px;
+	}
+	#sidenav .methods, #sidenav .properties, #sidenav .objects
+	{
+		font-size:10px;
+		margin-top:10px;
+		margin-left:0px;
+	}
+	li.subselected a
+	{
+		border-bottom:1px solid #9aa;
+	}
+	.apidoc
+	{
+		position:relative;
+	}
+	div.platforms
+	{
+		position:absolute;
+		right:12px;
+		top:10px;
+	}
+	div.platforms span.android
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/android12x12.png);
+		background-repeat:no-repeat;
+	}
+	div.platforms span.iphone
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/iphone12x12.png);
+		background-repeat:no-repeat;
+		top:-1px;
+		position:relative;
+	}
+	div.signature
+	{
+		margin-bottom:20px;
+		color:rgb(153,0,0);
+		font-weight:bold;
+	}
+	.apidoc h1
+	{
+		text-shadow: 2px 2px 2px #bbb;
+	}
+	#search.blur
+	{
+		color:#aaa;
+	}
+	</style>
+</head>
+<body>
+
+<header role="banner">
+	<div id="header">
+		<div class="titlebarLogo">
+	<h1><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h1>
+	<div class="arrow"></div>
+</div>
+<div class="squeeze">
+	<h2><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h2>
+	<nav>
+		<div class="login">
+							<a href="https://my.appcelerator.com/auth/signup">Signup</a> | <a href="https://my.appcelerator.com/auth/login?redirect_to=http%3A%2F%2Fdeveloper.appcelerator.com%2Fapidoc%2Fmobile%2Flatest%2FTitanium.Android-module">Login</a>
+						<a class="last" href="http://www.appcelerator.com" title="Appcelerator.com"><img src="/assets/img/dotcom.png" style="position:relative;top:4px;left:8px;" alt="Appcelerator"/></a>
+		</div>
+	</nav>
+</div>
+	</div>
+	<div id="nav">
+		<div class="squeeze">
+			<nav>
+	<div class="primary">
+			<div class="  ">
+			<a href="/get_started" title="Get Started">Get Started</a>
+		</div>
+			<div class="  ">
+			<a href="/questions" title="Q&amp;A">Q&amp;A</a>
+		</div>
+			<div class="  ">
+			<a href="/documentation" title="Docs">Docs</a>
+		</div>
+			<div class="  ">
+			<a href="http://training.appcelerator.com/" title="AppU Training">AppU Training</a>
+		</div>
+			<div class="  ">
+			<a href="/devlink" title="DevLink">DevLink</a>
+		</div>
+			<div class="  last ">
+			<a href="/get_help" title="Get Help">Get Help</a>
+		</div>
+			<div class="clear"></div>
+	</div>
+</nav>
+<nav>
+	<div class="secondary">
+					<a class="last" title="Developer Blog" href="/blog">Developer Blog</a>
+			</div>
+</nav>
+		</div>
+	</div>
+</header>
+
+<div id="contentBG">
+
+	<div class="dropshadow"></div>
+	
+	<div class="squeeze">
+	
+		<div class="contentWithLeftSidebar">
+			<div class="apidoc">
+				<div class="apidoc_container apidoc_module">
+
+<h1 class="namespace">Titanium.Android</h1>
+<div class="namespace_type">submodule of <a href="../latest/Titanium-module.html">Titanium</a></div>
+
+<div class="platforms">
+<span class="android">&nbsp;&nbsp;&nbsp;</span>
+<div class="clear"></div>
+<span class="since">1.5</span>
+</div>
+
+<div class="description">
+<p>The top level Android module. <tt>Ti.Android.currentActivity</tt> provides each context an Activity. This object cannot be created directly.</p>
+</div>
+
+<h3>Objects</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.Activity-object.html">Titanium.Android.Activity</a></td>
+	<td class="description"><p>The Titanium binding of an <a href="http://developer.android.com/reference/android/app/Activity.html">Android Activity</a></p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.Intent-object.html">Titanium.Android.Intent</a></td>
+	<td class="description"><p>The Titanium binding of an <a href="http://developer.android.com/reference/android/content/Intent.html">Android Intent</a></p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.Menu-object.html">Titanium.Android.Menu</a></td>
+	<td class="description"><p>The Titanium binding of an <a href="http://developer.android.com/reference/android/view/Menu.html">Android Menu</a></p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.MenuItem-object.html">Titanium.Android.MenuItem</a></td>
+	<td class="description"><p>The Titanium binding of an <a href="http://developer.android.com/reference/android/view/MenuItem.html">Android MenuItem</a></p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.Notification-object.html">Titanium.Android.Notification</a></td>
+	<td class="description"><p>The Titanium binding of an <a href="http://developer.android.com/reference/android/app/Notification.html">Android Notification</a>. </p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.PendingIntent-object.html">Titanium.Android.PendingIntent</a></td>
+	<td class="description"><p>The Titanium binding of an <a href="http://developer.android.com/reference/android/app/PendingIntent.html">Android Pending Intent</a></p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.R-object.html">Titanium.Android.R</a></td>
+	<td class="description"><p>The Titanium binding of <a href="http://developer.android.com/reference/android/R.html">android.R</a></p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.RemoteViews-object.html">Titanium.Android.RemoteViews</a></td>
+	<td class="description"><p>The Titanium binding of <a href="http://developer.android.com/reference/android/widget/RemoteViews.html">Android RemoteViews</a>. RemoteViews are an API for referencing and updating views that live in another process (i.e. in a <a href="../latest/Titanium.Android.Notification-proxy.html">Titanium.Android.Notification</a>)</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.Service-object.html">Titanium.Android.Service</a></td>
+	<td class="description"><p>The Titanium binding of an <a href="http://developer.android.com/reference/android/app/Service.html">Android Service</a>.  Can be used to start/stop the service directly and listen for service-specific events.  In the Javascript-based services you write, this can be referenced with <a href="../latest/Titanium.Android.currentService.html">Titanium.Android.currentService</a>.  You can create an instance of the service with <a href="../latest/Titanium.Android.createService-method.html">Titanium.Android.createService</a>.</p></td>
+</tr>
+</table>
+
+
+<h3>Methods</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.addEventListener-method.html">addEventListener</a></td>
+	<td class="description">add an event listener for the instance to receive view triggered events</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.createBroadcastIntent-method.html">createBroadcastIntent</a></td>
+	<td class="description"><p>Create a <a href="../latest/Titanium.Android.Intent-object.html">Titanium.Android.Intent</a> to be used to start a Broadcast.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.createIntent-method.html">createIntent</a></td>
+	<td class="description"><p>Create a <a href="../latest/Titanium.Android.Intent-object.html">Titanium.Android.Intent</a>. Used to start other Activities and for marshaling data.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.createIntentChooser-method.html">createIntentChooser</a></td>
+	<td class="description"><p>Display chooser interface to allow selection of desired target.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.createNotification-method.html">createNotification</a></td>
+	<td class="description"><p>Crate a <a href="../latest/Titanium.Android.Notification-object.html">Titanium.Android.Notification</a>. Used to notify the user of an event.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.createPendingIntent-method.html">createPendingIntent</a></td>
+	<td class="description"><p>Create a <a href="../latest/Titanium.Android.PendingIntent-object.html">Titanium.Android.PendingIntent</a> to be used inside a <a href="../latest/Titanium.Android.Notification-object.html">Titanium.Android.Notification</a></p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.createService-method.html">createService</a></td>
+	<td class="description"><p>Create a <a href="../latest/Titanium.Android.Service-object.html">Titanium.Android.Service</a> so you can start/stop it and listen for events from it.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.createServiceIntent-method.html">createServiceIntent</a></td>
+	<td class="description"><p>Create an <a href="../latest/Titanium.Android.Intent-object.html">Titanium.Android.Intent</a> to be used to start a Service.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.fireEvent-method.html">fireEvent</a></td>
+	<td class="description">fire a synthesized event to the views listener</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.isServiceRunning-method.html">isServiceRunning</a></td>
+	<td class="description"><p>Check on state of Service.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.removeEventListener-method.html">removeEventListener</a></td>
+	<td class="description">remove a previously added event listener</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.startService-method.html">startService</a></td>
+	<td class="description"><p>Start a simple service</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Android.stopService-method.html">stopService</a></td>
+	<td class="description"><p>Stop a simple service that was started with <tt>startService</tt>.</p></td>
+</tr>
+</table>
+
+<h3>Properties</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name">ACTION_AIRPLANE_MODE_CHANGED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_ALL_APPS</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_ANSWER</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_ATTACH_DATA</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_BATTERY_CHANGED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_BATTERY_LOW</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_BATTERY_OKAY</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_BOOT_COMPLETED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_BUG_REPORT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_CALL</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_CALL_BUTTON</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_CAMERA_BUTTON</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_CHOOSER</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_CLOSE_SYSTEM_DIALOGS</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_CONFIGURATION_CHANGED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_CREATE_SHORTCUT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_DATE_CHANGED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_DEFAULT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_DELETE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_DEVICE_STORAGE_LOW</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_DIAL</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_EDIT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_GET_CONTENT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_GTALK_SERVICE_CONNECTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_GTALK_SERVICE_DISCONNECTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_HEADSET_PLUG</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_INPUT_METHOD_CHANGED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_INSERT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_INSERT_OR_EDIT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MAIN</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MANAGE_PACKAGE_STORAGE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_BAD_REMOVAL</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_BUTTON</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_CHECKING</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_EJECT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_MOUNTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_NOFS</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_REMOVED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_SCANNER_FINISHED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_SCANNER_SCAN_FILE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_SCANNER_STARTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_SHARED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_UNMOUNTABLE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_MEDIA_UNMOUNTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_NEW_OUTGOING_CALL</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PACKAGE_ADDED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PACKAGE_CHANGED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PACKAGE_DATA_CLEARED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PACKAGE_INSTALL</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PACKAGE_REMOVED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PACKAGE_REPLACED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PACKAGE_RESTARTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PICK</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PICK_ACTIVITY</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_POWER_CONNECTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_POWER_DISCONNECTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_POWER_USAGE_SUMMARY</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_PROVIDER_CHANGED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_REBOOT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_RUN</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SCREEN_OFF</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SCREEN_ON</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SEARCH</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SEARCH_LONG_PRESS</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SEND</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SENDTO</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SEND_MULTIPLE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SET_WALLPAPER</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SHUTDOWN</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SYNC</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_SYSTEM_TUTORIAL</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_TIME_CHANGED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_TIME_TICK</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_UID_REMOVED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_UMS_CONNECTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_UMS_DISCONNECTED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_USER_PRESENT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_VIEW</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_VOICE_COMMAND</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_WALLPAPER_CHANGED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">ACTION_WEB_SEARCH</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_ALTERNATIVE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_BROWSABLE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_DEFAULT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_DEVELOPMENT_PREFERENCE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_EMBED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_FRAMEWORK_INSTRUMENTATION_TEST</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_HOME</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_INFO</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_LAUNCHER</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_MONKEY</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_OPENABLE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_PREFERENCE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_SAMPLE_CODE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_SELECTED_ALTERNATIVE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_TAB</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_TEST</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">CATEGORY_UNIT_TEST</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">DEFAULT_ALL</td>
+	<td class="type">int</td>
+	<td class="description"><p>Use all default values (where applicable).</p></td>
+</tr>
+<tr>
+	<td class="name">DEFAULT_LIGHTS</td>
+	<td class="type">int</td>
+	<td class="description"><p>Use the default notification lights.</p></td>
+</tr>
+<tr>
+	<td class="name">DEFAULT_SOUND</td>
+	<td class="type">int</td>
+	<td class="description"><p>Use the default notification sound.</p></td>
+</tr>
+<tr>
+	<td class="name">DEFAULT_VIBRATE</td>
+	<td class="type">int</td>
+	<td class="description"><p>Use the default notification vibrate.</p></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_ALARM_COUNT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_BCC</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_CC</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_DATA_REMOVED</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_DONT_KILL_APP</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_EMAIL</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_INTENT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_KEY_EVENT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_PHONE_NUMBER</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_REPLACING</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_SHORTCUT_ICON</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_SHORTCUT_ICON_RESOURCE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_SHORTCUT_INTENT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_SHORTCUT_NAME</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_STREAM</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_SUBJECT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_TEMPLATE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_TEXT</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_TITLE</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">EXTRA_UID</td>
+	<td class="type">string</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FILL_IN_ACTION</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FILL_IN_CATEGORIES</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FILL_IN_COMPONENT</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FILL_IN_DATA</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FILL_IN_PACKAGE</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_BROUGHT_TO_FRONT</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_CLEAR_TOP</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_FORWARD_RESULT</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_MULTIPLE_TASK</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_NEW_TASK</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_NO_HISTORY</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_NO_USER_ACTION</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_PREVIOUS_IS_TOP</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_REORDER_TO_FRONT</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_RESET_TASK_IF_NEEDED</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ACTIVITY_SINGLE_TOP</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_AUTO_CANCEL</td>
+	<td class="type">int</td>
+	<td class="description"><p>Bit to be bitwise-ored into the flags field that should be set if the notification should be canceled when it is clicked by the user.</p></td>
+</tr>
+<tr>
+	<td class="name">FLAG_CANCEL_CURRENT</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_DEBUG_LOG_RESOLUTION</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_FROM_BACKGROUND</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_GRANT_READ_URI_PERMISSION</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_GRANT_WRITE_URI_PERMISSION</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_INSISTENT</td>
+	<td class="type">int</td>
+	<td class="description"><p>Bit to be bitwise-ored into the flags field that if set, the audio will be repeated until the notification is cancelled or the notification window is opened.</p></td>
+</tr>
+<tr>
+	<td class="name">FLAG_NO_CLEAR</td>
+	<td class="type">int</td>
+	<td class="description"><p>Bit to be bitwise-ored into the flags field that should be set if the notification should not be canceled when the user clicks the Clear all button.</p></td>
+</tr>
+<tr>
+	<td class="name">FLAG_NO_CREATE</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ONE_SHOT</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ONGOING_EVENT</td>
+	<td class="type">int</td>
+	<td class="description"><p>Bit to be bitwise-ored into the flags field that should be set if this notification is in reference to something that is ongoing, like a phone call.</p></td>
+</tr>
+<tr>
+	<td class="name">FLAG_ONLY_ALERT_ONCE</td>
+	<td class="type">int</td>
+	<td class="description"><p>Bit to be bitwise-ored into the flags field that should be set if you want the sound and/or vibration play each time the notification is sent, even if it has not been canceled before that.</p></td>
+</tr>
+<tr>
+	<td class="name">FLAG_RECEIVER_REGISTERED_ONLY</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">FLAG_SHOW_LIGHTS</td>
+	<td class="type">int</td>
+	<td class="description"><p>Bit to be bitwise-ored into the flags field that should be set if you want the LED on for this notification.</p></td>
+</tr>
+<tr>
+	<td class="name">FLAG_UPDATE_CURRENT</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">PENDING_INTENT_FOR_ACTIVITY</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">PENDING_INTENT_FOR_BROADCAST</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">PENDING_INTENT_FOR_SERVICE</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">PENDING_INTENT_MAX_VALUE</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">R</td>
+	<td class="type">object</td>
+	<td class="description"><p>Accessor for android resources</p></td>
+</tr>
+<tr>
+	<td class="name">RESULT_CANCELED</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">RESULT_FIRST_USER</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">RESULT_OK</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">SCREEN_ORIENTATION_BEHIND</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">SCREEN_ORIENTATION_LANDSCAPE</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">SCREEN_ORIENTATION_NOSENSOR</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">SCREEN_ORIENTATION_PORTRAIT</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">SCREEN_ORIENTATION_SENSOR</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">SCREEN_ORIENTATION_UNSPECIFIED</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">SCREEN_ORIENTATION_USER</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+<tr>
+	<td class="name">STREAM_DEFAULT</td>
+	<td class="type">int</td>
+	<td class="description"><p>Use this constant as the value for audioStreamType to request that the default stream type for notifications be used.</p></td>
+</tr>
+<tr>
+	<td class="name">URI_INTENT_SCHEME</td>
+	<td class="type">int</td>
+	<td class="description"></td>
+</tr>
+</table>
+
+<h3>Events</h3>
+This module has no events
+
+<h3>Notes</h3>
+
+<p>Several (almost all) of the constants you see above are directly taken from Android.  So if we've failed to document all of them, have a look online at the <a href="http://developer.android.com/reference/android/app/Service.html">Android SDK reference pages</a>.</p>
+<p>The most important page there will be the <a href="http://developer.android.com/reference/android/content/Intent.html">Intent reference</a>, which will give you the meaning of those ACTION, EXTRA and CATEGORY constants.</p>
+
+
+
+</div>			</div>
+		</div> 
+	
+		<div class="leftSidebar">
+			<h3>Mobile API Reference</h3>
+			<div style="margin-bottom:10px;">
+				<form method="GET" action="/apidoc/search/mobile/1.6.2">
+					<input class="blur" id="search" type="search" value="search documentation" name="q" style="width:99%"/>
+				</form>
+			</div>
+			<script>
+				$(function()
+				{
+					$('#search').blur(function()
+					{
+						$(this).val('search documentation').addClass('blur');
+					});
+					$('#search').focus(function()
+					{
+						$(this).val('').removeClass('blur');
+					});
+				});
+			</script>
+			<nav>
+				<ul id="sidenav">
+											<li class="">
+							<a href="../latest/Titanium-module.html">Titanium</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.API-module.html">Titanium.API</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Accelerometer-module.html">Titanium.Accelerometer</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Analytics-module.html">Titanium.Analytics</a>																										</li>
+											<li class="selected">
+							<a href="../latest/Titanium.Android-module.html">Titanium.Android</a>													<div class="objects">Objects</div>
+							<ul class="objects">
+															<li class=""><a href="../latest/Titanium.Android.Activity-object.html">Activity</a></li>
+															<li class=""><a href="../latest/Titanium.Android.Intent-object.html">Intent</a></li>
+															<li class=""><a href="../latest/Titanium.Android.Menu-object.html">Menu</a></li>
+															<li class=""><a href="../latest/Titanium.Android.MenuItem-object.html">MenuItem</a></li>
+															<li class=""><a href="../latest/Titanium.Android.Notification-object.html">Notification</a></li>
+															<li class=""><a href="../latest/Titanium.Android.PendingIntent-object.html">PendingIntent</a></li>
+															<li class=""><a href="../latest/Titanium.Android.R-object.html">R</a></li>
+															<li class=""><a href="../latest/Titanium.Android.RemoteViews-object.html">RemoteViews</a></li>
+															<li class=""><a href="../latest/Titanium.Android.Service-object.html">Service</a></li>
+								
+							</ul>
+																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.Calendar-module.html">Titanium.Android.Calendar</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.NotificationManager-module.html">Titanium.Android.NotificationManager</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App-module.html">Titanium.App</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Android-module.html">Titanium.App.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Properties-module.html">Titanium.App.Properties</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.iOS-module.html">Titanium.App.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Contacts-module.html">Titanium.Contacts</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Database-module.html">Titanium.Database</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Facebook-module.html">Titanium.Facebook</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Filesystem-module.html">Titanium.Filesystem</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Geolocation-module.html">Titanium.Geolocation</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Gesture-module.html">Titanium.Gesture</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Locale-module.html">Titanium.Locale</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Map-module.html">Titanium.Map</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Media-module.html">Titanium.Media</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Network-module.html">Titanium.Network</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Platform-module.html">Titanium.Platform</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI-module.html">Titanium.UI</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Android-module.html">Titanium.UI.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Clipboard-module.html">Titanium.UI.Clipboard</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iOS-module.html">Titanium.UI.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPad-module.html">Titanium.UI.iPad</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPhone-module.html">Titanium.UI.iPhone</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Utils-module.html">Titanium.Utils</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.XML-module.html">Titanium.XML</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Yahoo-module.html">Titanium.Yahoo</a>																										</li>
+						
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="clear"></div>
+	
+	</div> 
+
+</div> 
+
+<footer>
+	<div id="footer">
+		<div class="squeeze">
+			<div style="height:200px;">
+				<footer>
+	<div id="footer">
+		<div class="squeeze">
+	 
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/products/" title="Products">Products</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/" title="Titanium Platform">Titanium Platform</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/titanium-architecture/" title="Titanium Architecture">Titanium Architecture</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-mobile/" title="Titanium Mobile">Titanium Mobile</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-desktop/" title="Titanium Desktop">Titanium Desktop</a></li>
+					<li><a href="http://www.appcelerator.com/products/native/" title="The Native Advantage">The Native Advantage</a></li>
+					<li><a href="http://www.appcelerator.com/products/download/" title="Download Titanium">Download Titanium</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/partners/" title="Partners">Partners</a></li>
+					<li><a href="http://www.appcelerator.com/partners/case-studies/" title="Case Studies">Case Studies</a></li>
+					<li><a href="http://www.appcelerator.com/partners/testimonials/" title="Testimonials">Testimonials</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/resources/" title="Resources">Resources</a></li>
+					<li><a href="http://www.appcelerator.com/resources/app-u/" title="Appcelerator University">Appcelerator University</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/showcase/" title="Showcase">Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/applications-showcase/" title="Applications Showcase">Applications Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/videos/" title="Videos">Videos</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/company/" title="About Appcelerator, Inc.">About Appcelerator, Inc.</a></li>
+					<li><a href="http://www.appcelerator.com/company/leadership-team/" title="Leadership Team">Leadership Team</a></li>
+					<li><a href="http://www.appcelerator.com/company/investors-board/" title="Investors &#038; Board">Investors &#038; Board</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/" title="News &#038; Press">News &#038; Press</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/press-releases/" title="Press Releases">Press Releases</a></li>
+					<li><a href="http://www.appcelerant.com" title="Appcelerant Blog">Appcelerant Blog</a></li>
+					<li><a href="http://www.appcelerator.com/company/contact-us/" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</div> 
+
+			<div class="clear"></div>
+			
+			<div class="legal">
+				<a href="http://www.appcelerator.com"><img style="float:left; margin-right:15px" src="/assets/img/a-logo.png" alt="Appcelerator" /></a>
+				<a href="http://www.appcelerant.com">Blog</a> |  
+				<a href="http://twitter.com/appcelerator">Twitter</a> |
+				<a href="http://www.appcelerator.com/company/privacy">Privacy Policy</a> |
+				<a href="http://www.appcelerator.com/company/terms-and-conditions-of-use">Terms and Conditions</a>
+				<br />
+				&copy; 2008-2011 Appcelerator Inc. All rights reserved.  Appcelerator is a registered trademark.
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+
+<script src="http://munchkin.marketo.net/munchkin.js"></script>
+<script>try { mktoMunchkin("636-NHJ-871"); } catch (err) {}</script>
+<script>
+var _qoptions={qacct:"p-4aHbaizUurMCQ"},
+	_gaq=[['_setAccount','UA-5155164-1'],['_setDomainName','none'],['_setAllowLinker',true],['_setAllowAnchor',true],['_setAllowHash',false],['_addIgnoredOrganic',document.location.host],['_initData'],['_trackPageview']];
+
+(function(d) {
+function load(u){var s=d.getElementsByTagName('script')[0],sc=d.createElement('script');sc.async=true;sc.src=u;s.parentNode.insertBefore(sc,s);}
+
+load('http://www.google-analytics.com/ga.js');
+load('http://api.appcelerator.net/p/beacon.js');
+load('http://api.appcelerator.net/p/analytics.js');
+load('http://edge.quantserve.com/quant.js');
+
+function cc(l,n,s){if(!l||!n||!s||l==''||n==''||s==''){return'-'}var i,i2,i3,c='1';i=l.indexOf(n);i3=n.indexOf('=')+1;if(i>-1){i2=l.indexOf(s,i);if(i2<0){i2=l.length}c=l.substring((i+i3),i2)}return c};
+window._gaToMarketo=function(){var gaCookie=cc(document.cookie,'__utmz=',';');return {cf_campaign:cc(gaCookie,'utmccn=','|'),cf_source:cc(gaCookie,'utmsrc=','|'),cf_medium:cc(gaCookie,'utmcmd=','|'),cf_content:cc(gaCookie,'utmcct=','|'),cf_keyword:cc(gaCookie,'utmctr=','|'),cf_visits:cc(document.cookie,'__utma=',';').split('.')[5]}};
+jQuery(function(){jQuery('form[action*=sub-webform]').each(function(){var _form=this;jQuery.each(_gaToMarketo(),function(k,v){jQuery(_form).append('<input type="hidden" name="'+k+'" value="'+v+'" />')})})})
+})(document);
+</script>
+<noscript><img src="http://pixel.quantserve.com/pixel/p-4aHbaizUurMCQ.gif" style="border:0;display:none;" height="1" width="1" alt="Quantcast"/></noscript>
+</body>
+</html>

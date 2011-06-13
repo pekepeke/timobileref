@@ -1,0 +1,1122 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Appcelerator Developer Center - API for Titanium.Media (version 1.6.2)</title>
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen" />
+<link rel="image_src" href="/assets/img/appc_icon.jpg"/>
+<meta property="og:site_name" content="Appcelerator Developer Center"/> 
+<meta property="og:image" content="/assets/img/appc_icon.jpg"/> 
+<script src="/assets/js/jquery-1.4.min.js" type="text/javascript"></script>
+	<style>
+	.deprecated
+	{
+		border:1px solid #900;
+		color: #D8000C;
+		background-color: #FFBABA;
+		padding:10px;
+		margin-top:10px;
+		margin-bottom:30px;
+	}
+	.apidoc .namespace_type
+	{
+		font-size:11px;
+		color:#aaa;
+		position:relative;
+		top:-20px;
+	}
+	.apidoc .since
+	{
+		font-size:11px;
+		color:#222;
+		position:absolute;
+		top:30px;
+		right:10px;
+	}
+	.apidoc  table
+	{
+		margin-top:10px;
+		border:1px solid #999;
+		width:99%;
+	}
+	.apidoc table.event
+	{
+		border:1px solid #ccc;
+	}
+	.apidoc table.event td
+	{
+		background-color:#eff;
+	}
+	.apidoc table.event td.name
+	{
+		font-weight:bold;
+		width:100px;
+	}
+	.apidoc table td.type
+	{
+		width:20px;
+	}
+	.apidoc table td
+	{
+		padding:4px;
+		vertical-align:top;
+		border-bottom:1px solid #ddd;
+	}
+	.apidoc table tr:last-child td
+	{
+		border-bottom:none !important;
+	}
+	.apidoc table td.name
+	{
+		font-weight:bold;
+	}
+	.apidoc table th
+	{
+		background-color:#aaa;
+		text-align:left;
+		padding:4px;
+		font-weight:bold;
+	}
+	.apidoc h3
+	{
+		margin-top:20px;
+	}
+	#sidenav .methods, #sidenav .properties, #sidenav .objects
+	{
+		font-size:10px;
+		margin-top:10px;
+		margin-left:0px;
+	}
+	li.subselected a
+	{
+		border-bottom:1px solid #9aa;
+	}
+	.apidoc
+	{
+		position:relative;
+	}
+	div.platforms
+	{
+		position:absolute;
+		right:12px;
+		top:10px;
+	}
+	div.platforms span.android
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/android12x12.png);
+		background-repeat:no-repeat;
+	}
+	div.platforms span.iphone
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/iphone12x12.png);
+		background-repeat:no-repeat;
+		top:-1px;
+		position:relative;
+	}
+	div.signature
+	{
+		margin-bottom:20px;
+		color:rgb(153,0,0);
+		font-weight:bold;
+	}
+	.apidoc h1
+	{
+		text-shadow: 2px 2px 2px #bbb;
+	}
+	#search.blur
+	{
+		color:#aaa;
+	}
+	</style>
+</head>
+<body>
+
+<header role="banner">
+	<div id="header">
+		<div class="titlebarLogo">
+	<h1><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h1>
+	<div class="arrow"></div>
+</div>
+<div class="squeeze">
+	<h2><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h2>
+	<nav>
+		<div class="login">
+							<a href="https://my.appcelerator.com/auth/signup">Signup</a> | <a href="https://my.appcelerator.com/auth/login?redirect_to=http%3A%2F%2Fdeveloper.appcelerator.com%2Fapidoc%2Fmobile%2Flatest%2FTitanium.Media-module">Login</a>
+						<a class="last" href="http://www.appcelerator.com" title="Appcelerator.com"><img src="/assets/img/dotcom.png" style="position:relative;top:4px;left:8px;" alt="Appcelerator"/></a>
+		</div>
+	</nav>
+</div>
+	</div>
+	<div id="nav">
+		<div class="squeeze">
+			<nav>
+	<div class="primary">
+			<div class="  ">
+			<a href="/get_started" title="Get Started">Get Started</a>
+		</div>
+			<div class="  ">
+			<a href="/questions" title="Q&amp;A">Q&amp;A</a>
+		</div>
+			<div class="  ">
+			<a href="/documentation" title="Docs">Docs</a>
+		</div>
+			<div class="  ">
+			<a href="http://training.appcelerator.com/" title="AppU Training">AppU Training</a>
+		</div>
+			<div class="  ">
+			<a href="/devlink" title="DevLink">DevLink</a>
+		</div>
+			<div class="  last ">
+			<a href="/get_help" title="Get Help">Get Help</a>
+		</div>
+			<div class="clear"></div>
+	</div>
+</nav>
+<nav>
+	<div class="secondary">
+					<a class="last" title="Developer Blog" href="/blog">Developer Blog</a>
+			</div>
+</nav>
+		</div>
+	</div>
+</header>
+
+<div id="contentBG">
+
+	<div class="dropshadow"></div>
+	
+	<div class="squeeze">
+	
+		<div class="contentWithLeftSidebar">
+			<div class="apidoc">
+				<div class="apidoc_container apidoc_module">
+
+<h1 class="namespace">Titanium.Media</h1>
+<div class="namespace_type">submodule of <a href="../latest/Titanium-module.html">Titanium</a></div>
+
+<div class="platforms">
+<span class="android">&nbsp;&nbsp;&nbsp;</span>
+<span class="iphone">&nbsp;&nbsp;&nbsp;</span>
+<span class="ipad">&nbsp;&nbsp;&nbsp;</span>
+<div class="clear"></div>
+<span class="since">0.1</span>
+</div>
+
+<div class="description">
+<p>The top level Media module.  The Media module is used accessing the device's media related  functionality such as playing audio or recording video.</p>
+</div>
+
+<h3>Objects</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.AudioPlayer-object.html">Titanium.Media.AudioPlayer</a></td>
+	<td class="description"><p>The AudioPlayer object is returned by <a href="../latest/Titanium.Media.createAudioPlayer-method.html">Titanium.Media.createAudioPlayer</a> and is used for streaming audio to the device and low-level control of the audio playback.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.AudioRecorder-object.html">Titanium.Media.AudioRecorder</a></td>
+	<td class="description"><p>The AudioRecorder object is returned by <a href="../latest/Titanium.Media.createAudioRecorder-method.html">Titanium.Media.createAudioRecorder</a> and is used for recording audio from the device microphone.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.Item-object.html">Titanium.Media.Item</a></td>
+	<td class="description"><p>A representation of a media item returned by the music picker as part of the <tt>items</tt> array in the dictionary passed to its <tt>success</tt> function.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.MusicPlayer-object.html">Titanium.Media.MusicPlayer</a></td>
+	<td class="description"><p>The MusicPlayer instance returned from <a href="../latest/Titanium.Media.createMusicPlayer-method.html">Titanium.Media.createMusicPlayer</a>.  This object represents a music controller.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.Sound-object.html">Titanium.Media.Sound</a></td>
+	<td class="description"><p>The Sound object is returned by <a href="../latest/Titanium.Media.createSound-method.html">Titanium.Media.createSound</a> and is useful for playing basic sounds. The Sound object loads the entire media resource in memory before playing.  If you need to support streaming, use the <a href="../latest/Titanium.Media.createAudioPlayer-method.html">Titanium.Media.createAudioPlayer</a> API.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a></td>
+	<td class="description"><p>The VideoPlayer object is returned by <a href="../latest/Titanium.Media.createVideoPlayer-method.html">Titanium.Media.createVideoPlayer</a> and is useful for playing videos. </p></td>
+</tr>
+</table>
+
+
+<h3>Methods</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.addEventListener-method.html">addEventListener</a></td>
+	<td class="description">add an event listener for the instance to receive view triggered events</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.beep-method.html">beep</a></td>
+	<td class="description"><p>play a device beep notification</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.createAudioPlayer-method.html">createAudioPlayer</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.Media.AudioPlayer-object.html">Titanium.Media.AudioPlayer</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.createAudioRecorder-method.html">createAudioRecorder</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.Media.AudioRecorder-object.html">Titanium.Media.AudioRecorder</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.createItem-method.html">createItem</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.Media.Item-object.html">Titanium.Media.Item</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.createMusicPlayer-method.html">createMusicPlayer</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.Media.MusicPlayer-object.html">Titanium.Media.MusicPlayer</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.createSound-method.html">createSound</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.Media.Sound-object.html">Titanium.Media.Sound</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.createVideoPlayer-method.html">createVideoPlayer</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.fireEvent-method.html">fireEvent</a></td>
+	<td class="description">fire a synthesized event to the views listener</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.hideCamera-method.html">hideCamera</a></td>
+	<td class="description"><p>hide the device camera UI. this must be called after calling <tt>showCamera</tt> and only when <tt>autohide</tt> is set to false. this method will cause the media capture device be hidden.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.hideMusicLibrary-method.html">hideMusicLibrary</a></td>
+	<td class="description"><p>hide the music library.  This must be called after calling <tt>showMusicLibrary</tt> and only when <tt>autohide</tt> is set to false.  iPhone and iPad only.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.isMediaTypeSupported-method.html">isMediaTypeSupported</a></td>
+	<td class="description"><p>return boolean to indicate if the media type is supported</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.openPhotoGallery-method.html">openPhotoGallery</a></td>
+	<td class="description"><p>open the photo gallery picker</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.removeEventListener-method.html">removeEventListener</a></td>
+	<td class="description">remove a previously added event listener</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.saveToPhotoGallery-method.html">saveToPhotoGallery</a></td>
+	<td class="description"><p>save media to photo gallery / camera roll</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.showCamera-method.html">showCamera</a></td>
+	<td class="description"><p>show the camera</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.showMusicLibrary-method.html">showMusicLibrary</a></td>
+	<td class="description"><p>show the music library.  iPhone and iPad only.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.startMicrophoneMonitor-method.html">startMicrophoneMonitor</a></td>
+	<td class="description"><p>start the monitoring of microphone sound level</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.stopMicrophoneMonitor-method.html">stopMicrophoneMonitor</a></td>
+	<td class="description"><p>stop the monitoring of microphone sound level</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.takePicture-method.html">takePicture</a></td>
+	<td class="description"><p>use the device camera to capture a photo. this must be called after calling <tt>showCamera</tt> and only when <tt>autohide</tt> is set to false. this method will cause the media capture device to capture a photo and call the <tt>success</tt> callback.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.takeScreenshot-method.html">takeScreenshot</a></td>
+	<td class="description"><p>take a screen shot of the visible UI on the device</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Media.vibrate-method.html">vibrate</a></td>
+	<td class="description"><p>play a device vibration</p></td>
+</tr>
+</table>
+
+<h3>Properties</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name">AUDIO_FILEFORMAT_3GP2</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio file format 3GPP-2</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FILEFORMAT_3GPP</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio file format 3GPP</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FILEFORMAT_AIFF</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio file format AIFF</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FILEFORMAT_AMR</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio file format AMR</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FILEFORMAT_CAF</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio file format Apple Compressed Audio Format (CAF)</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FILEFORMAT_MP3</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio file format MP3</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FILEFORMAT_MP4</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio file format MP4</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FILEFORMAT_MP4A</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio file format MP4A</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FILEFORMAT_WAVE</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio file format WAVE</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FORMAT_AAC</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio format MPEG4 AAC encoding</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FORMAT_ALAW</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio format 8-bit aLaw encoding</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FORMAT_APPLE_LOSSLESS</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio format apple lossless encoding</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FORMAT_ILBC</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio format iLBC encoding</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FORMAT_IMA4</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio format Apple IMA4 encoding</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FORMAT_LINEAR_PCM</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio format Linear 16-bit, PCM encoding</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_FORMAT_ULAW</td>
+	<td class="type">int</td>
+	<td class="description"><p>audio format 8-bit muLaw encoding</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_HEADPHONES</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for line type headphones</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_HEADPHONES_AND_MIC</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant line type headphones and microphone</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_HEADSET_INOUT</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant line type headset in/out</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_LINEOUT</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant line type line out</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_MICROPHONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant line type microphone</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_MUTED</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant line type muted switch is on</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_RECEIVER_AND_MIC</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant line type receiver and microphone</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_SESSION_MODE_AMBIENT</td>
+	<td class="type">int</td>
+	<td class="description"><p>For long-duration sounds such as rain, car engine noise, and so on. It is also for 'play along' style applications, such a virtual piano that a user plays over iPod audio.</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_SESSION_MODE_PLAYBACK</td>
+	<td class="type">int</td>
+	<td class="description"><p>For playing recorded music or other sounds that are central to the successful use of your application. When using this mode, your application audio continues with the Ring/Silent switch set to silent or when the screen locks. This property normally disallows iPod audio to mix with application audio</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_SESSION_MODE_PLAY_AND_RECORD</td>
+	<td class="type">int</td>
+	<td class="description"><p>Allows recording (input) and playback (output) of audio, such as for a VOIP (voice over IP) application. This category is appropriate for simultaneous recording and playback, and also for applications that record and play back but not simultaneously. If you want to ensure that sounds such as Messages alerts do not play while your application is recording, use  <a href="../latest/Titanium.Media.AUDIO_SESSION_MODE_RECORD-property.html">Titanium.Media.AUDIO_SESSION_MODE_RECORD</a> instead. This category normally disallows iPod audio to mix with application audio.</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_SESSION_MODE_RECORD</td>
+	<td class="type">int</td>
+	<td class="description"><p>For recording audio; it silences playback audio.</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_SESSION_MODE_SOLO_AMBIENT</td>
+	<td class="type">int</td>
+	<td class="description"><p>The solo ambient sound category is for long-duration sounds such as rain, car engine noise, and so on. When you use this category, audio from built-in applications, such as the iPod, is silenced. Your audio is silenced when the Ring/Silent switch is set to <tt>silent</tt> or when the screen locks.</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_SPEAKER</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant line type speaker</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_UNAVAILABLE</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant line type unavailable</p></td>
+</tr>
+<tr>
+	<td class="name">AUDIO_UNKNOWN</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant line type unknown or not determined</p></td>
+</tr>
+<tr>
+	<td class="name">DEVICE_BUSY</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for media device busy error</p></td>
+</tr>
+<tr>
+	<td class="name">MEDIA_TYPE_PHOTO</td>
+	<td class="type">int</td>
+	<td class="description"><p>media type constant to signify photo</p></td>
+</tr>
+<tr>
+	<td class="name">MEDIA_TYPE_VIDEO</td>
+	<td class="type">int</td>
+	<td class="description"><p>media type constant to signify video</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_MEDIA_TYPE_ALL</td>
+	<td class="type">int</td>
+	<td class="description"><p>media containing any content</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_MEDIA_TYPE_ANY_AUDIO</td>
+	<td class="type">int</td>
+	<td class="description"><p>media containing any audio content</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_MEDIA_TYPE_AUDIOBOOK</td>
+	<td class="type">int</td>
+	<td class="description"><p>media containing audiobook content</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_MEDIA_TYPE_MUSIC</td>
+	<td class="type">int</td>
+	<td class="description"><p>media containing music content</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_MEDIA_TYPE_PODCAST</td>
+	<td class="type">int</td>
+	<td class="description"><p>media containing podcast content</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_REPEAT_ALL</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for repeating all setting</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_REPEAT_DEFAULT</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for user default repeat setting</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_REPEAT_NONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for no repeat setting</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_REPEAT_ONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for repeating one item setting</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_SHUFFLE_ALBUMS</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for shuffling complete albums setting</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_SHUFFLE_DEFAULT</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for user default shuffle setting</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_SHUFFLE_NONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for no shuffle setting</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_SHUFFLE_SONGS</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for shuffling songs setting</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_STATE_INTERRUPTED</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for interrupted state</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_STATE_PAUSED</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for paused state</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_STATE_PLAYING</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for playing state</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_STATE_SEEK_BACKWARD</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for backward seek state</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_STATE_SKEEK_FORWARD</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for forward seek state</p></td>
+</tr>
+<tr>
+	<td class="name">MUSIC_PLAYER_STATE_STOPPED</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for stopped state</p></td>
+</tr>
+<tr>
+	<td class="name">NO_CAMERA</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for media no camera error</p></td>
+</tr>
+<tr>
+	<td class="name">NO_VIDEO</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for media no video error</p></td>
+</tr>
+<tr>
+	<td class="name">QUALITY_HIGH</td>
+	<td class="type">int</td>
+	<td class="description"><p>media type constant to use high-quality video recording. Recorded files are suitable for on-device playback and for wired transfer to the Desktop using Image Capture; they are likely to be too large for transfer using Wi-Fi.</p></td>
+</tr>
+<tr>
+	<td class="name">QUALITY_LOW</td>
+	<td class="type">int</td>
+	<td class="description"><p>media type constant to use use low-quality video recording. Recorded files can usually be transferred over the cellular network.</p></td>
+</tr>
+<tr>
+	<td class="name">QUALITY_MEDIUM</td>
+	<td class="type">int</td>
+	<td class="description"><p>media type constant to use medium-quality video recording. Recorded files can usually be transferred using Wi-Fi. This is the default video quality setting.</p></td>
+</tr>
+<tr>
+	<td class="name">UNKNOWN_ERROR</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for unknown media error</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_CONTROL_DEFAULT</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for video controls default</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_CONTROL_EMBEDDED</td>
+	<td class="type">int</td>
+	<td class="description"><p>Controls for an embedded view. Used in conjunction with movieControlStyle property of <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a> in iPhone 3.2+</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_CONTROL_FULLSCREEN</td>
+	<td class="type">int</td>
+	<td class="description"><p>Controls for fullscreen. Used in conjunction with movieControlStyle property of <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a> in iPhone 3.2+</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_CONTROL_HIDDEN</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for video controls hidden</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_CONTROL_NONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>No controls. Used in conjunction with movieControlStyle property of <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a> in iPhone 3.2+</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_CONTROL_VOLUME_ONLY</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for video controls volume only</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_FINISH_REASON_PLAYBACK_ENDED</td>
+	<td class="type">int</td>
+	<td class="description"><p>the video playback ended normally</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_FINISH_REASON_PLAYBACK_ERROR</td>
+	<td class="type">int</td>
+	<td class="description"><p>the video playback ended abnormally</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_FINISH_REASON_USER_EXITED</td>
+	<td class="type">int</td>
+	<td class="description"><p>the video playback ended by user action (such as clicking the <tt>Done</tt> button)</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_LOAD_STATE_PLAYABLE</td>
+	<td class="type">int</td>
+	<td class="description"><p>the current media is playable</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_LOAD_STATE_PLAYTHROUGH_OK</td>
+	<td class="type">int</td>
+	<td class="description"><p>playback will be automatically started in this state when <tt>autoplay</tt> is true</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_LOAD_STATE_STALLED</td>
+	<td class="type">int</td>
+	<td class="description"><p>playback will be automatically paused in this state, if started</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_LOAD_STATE_UNKNOWN</td>
+	<td class="type">int</td>
+	<td class="description"><p>the current load state is not known</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_MEDIA_TYPE_AUDIO</td>
+	<td class="type">int</td>
+	<td class="description"><p>A audio type of media in the movie returned by <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a> <tt>mediaTypes</tt> property</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_MEDIA_TYPE_NONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>An unknown type of media in the movie returned by <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a> <tt>mediaTypes</tt> property.</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_MEDIA_TYPE_VIDEO</td>
+	<td class="type">int</td>
+	<td class="description"><p>A video type of media in the movie returned by <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a> <tt>mediaTypes</tt> property</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_PLAYBACK_STATE_INTERRUPTED</td>
+	<td class="type">int</td>
+	<td class="description"><p>playback has been interrupted</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_PLAYBACK_STATE_PAUSED</td>
+	<td class="type">int</td>
+	<td class="description"><p>playback is paused</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_PLAYBACK_STATE_PLAYING</td>
+	<td class="type">int</td>
+	<td class="description"><p>playback is playing</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_PLAYBACK_STATE_SEEKING_BACKWARD</td>
+	<td class="type">int</td>
+	<td class="description"><p>playback is rewinding</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_PLAYBACK_STATE_SEEKING_FORWARD</td>
+	<td class="type">int</td>
+	<td class="description"><p>playback is seeking forward</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_PLAYBACK_STATE_STOPPED</td>
+	<td class="type">int</td>
+	<td class="description"><p>playback has stopped</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_REPEAT_MODE_NONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>the video will not repeat</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_REPEAT_MODE_ONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>the video will repeat once</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_SCALING_ASPECT_FILL</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for video aspect where the movie will be scaled until the movie fills the entire screen. Content at the edges of the larger of the two dimensions is clipped so that the other dimension fits the screen exactly. The aspect ratio of the movie is preserved.</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_SCALING_ASPECT_FIT</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for video aspect fit where the movie will be scaled until one dimension fits on the screen exactly. In the other dimension, the region between the edge of the movie and the edge of the screen is filled with a black bar. The aspect ratio of the movie is preserved.</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_SCALING_MODE_FILL</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for video aspect where the movie will be scaled until both dimensions fit the screen exactly. The aspect ratio of the movie is not preserved.</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_SCALING_NONE</td>
+	<td class="type">int</td>
+	<td class="description"><p>constant for video scaling where the scaling is turn off. The movie will not be scaled.</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_SOURCE_TYPE_FILE</td>
+	<td class="type">int</td>
+	<td class="description"><p>the video source type is a file. Related to the <tt>sourceType</tt> property of <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a></p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_SOURCE_TYPE_STREAMING</td>
+	<td class="type">int</td>
+	<td class="description"><p>the video source type is a remote stream. Related to the <tt>sourceType</tt> property of <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a></p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_SOURCE_TYPE_UNKNOWN</td>
+	<td class="type">int</td>
+	<td class="description"><p>the video source type is unknown. Related to the <tt>sourceType</tt> property of <a href="../latest/Titanium.Media.VideoPlayer-object.html">Titanium.Media.VideoPlayer</a></p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_TIME_OPTION_EXACT</td>
+	<td class="type">int</td>
+	<td class="description"><p>use the exact time</p></td>
+</tr>
+<tr>
+	<td class="name">VIDEO_TIME_OPTION_NEAREST_KEYFRAME</td>
+	<td class="type">int</td>
+	<td class="description"><p>use the closest keyframe in the time</p></td>
+</tr>
+<tr>
+	<td class="name">appMusicPlayer</td>
+	<td class="type">object</td>
+	<td class="description"><p>an instance of <a href="../latest/Titanium.Media.MusicPlayer-object.html">Titanium.Media.MusicPlayer</a> representing the app-specific music player.  iPhone/iPad only</p></td>
+</tr>
+<tr>
+	<td class="name">audioLineType</td>
+	<td class="type">int</td>
+	<td class="description"><p>returns the line type constant for the current line type</p></td>
+</tr>
+<tr>
+	<td class="name">audioPlaying</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>returns true if the device is playing audio</p></td>
+</tr>
+<tr>
+	<td class="name">audioSessionMode</td>
+	<td class="type">int</td>
+	<td class="description"><p>a constant for the audio session mode to be used. Must be set while the audio session is inactive (no sounds are playing, no listeners for audio properties on the Media module, but the iPod may be active).</p></td>
+</tr>
+<tr>
+	<td class="name">availableCameraMediaTypes</td>
+	<td class="type">array</td>
+	<td class="description"><p>return an array of media type constants supported for the camera</p></td>
+</tr>
+<tr>
+	<td class="name">availablePhotoGalleryMediaTypes</td>
+	<td class="type">array</td>
+	<td class="description"><p>return an array of media type constants supported for saving to the photo gallery</p></td>
+</tr>
+<tr>
+	<td class="name">availablePhotoMediaTypes</td>
+	<td class="type">array</td>
+	<td class="description"><p>return an array of media type constants supported for the photo</p></td>
+</tr>
+<tr>
+	<td class="name">averageMicrophonePower</td>
+	<td class="type">float</td>
+	<td class="description"><p>return the current average microphone level in dB or -1 if microphone monitoring is disabled</p></td>
+</tr>
+<tr>
+	<td class="name">canRecord</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>returns true if the device has recording input device available</p></td>
+</tr>
+<tr>
+	<td class="name">isCameraSupported</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>returns true if the device has camera support</p></td>
+</tr>
+<tr>
+	<td class="name">peakMicrophonePower</td>
+	<td class="type">float</td>
+	<td class="description"><p>return the current microphone level peak power in dB or -1 if microphone monitoring is disabled</p></td>
+</tr>
+<tr>
+	<td class="name">systemMusicPlayer</td>
+	<td class="type">object</td>
+	<td class="description"><p>an instance of <a href="../latest/Titanium.Media.MusicPlayer-object.html">Titanium.Media.MusicPlayer</a> representing the system-wide music player.  iPhone/iPad only</p></td>
+</tr>
+<tr>
+	<td class="name">volume</td>
+	<td class="type">float</td>
+	<td class="description"><p>the current volume of the playback device</p></td>
+</tr>
+</table>
+
+<h3>Events</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name">linechange</td>
+	<td class="description">
+		<p>fired when a audio line type change is detected</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">recordinginput</td>
+	<td class="description">
+		<p>fired when availablity of recording input changes</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">available</td><td><p>bool indicating availability of recording device</p></td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">volume</td>
+	<td class="description">
+		<p>fired when the volume output changes</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">volume</td><td><p>float of the new volume in dB</p></td></tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+
+
+</div>			</div>
+		</div> 
+	
+		<div class="leftSidebar">
+			<h3>Mobile API Reference</h3>
+			<div style="margin-bottom:10px;">
+				<form method="GET" action="/apidoc/search/mobile/1.6.2">
+					<input class="blur" id="search" type="search" value="search documentation" name="q" style="width:99%"/>
+				</form>
+			</div>
+			<script>
+				$(function()
+				{
+					$('#search').blur(function()
+					{
+						$(this).val('search documentation').addClass('blur');
+					});
+					$('#search').focus(function()
+					{
+						$(this).val('').removeClass('blur');
+					});
+				});
+			</script>
+			<nav>
+				<ul id="sidenav">
+											<li class="">
+							<a href="../latest/Titanium-module.html">Titanium</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.API-module.html">Titanium.API</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Accelerometer-module.html">Titanium.Accelerometer</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Analytics-module.html">Titanium.Analytics</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android-module.html">Titanium.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.Calendar-module.html">Titanium.Android.Calendar</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.NotificationManager-module.html">Titanium.Android.NotificationManager</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App-module.html">Titanium.App</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Android-module.html">Titanium.App.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Properties-module.html">Titanium.App.Properties</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.iOS-module.html">Titanium.App.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Contacts-module.html">Titanium.Contacts</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Database-module.html">Titanium.Database</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Facebook-module.html">Titanium.Facebook</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Filesystem-module.html">Titanium.Filesystem</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Geolocation-module.html">Titanium.Geolocation</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Gesture-module.html">Titanium.Gesture</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Locale-module.html">Titanium.Locale</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Map-module.html">Titanium.Map</a>																										</li>
+											<li class="selected">
+							<a href="../latest/Titanium.Media-module.html">Titanium.Media</a>													<div class="objects">Objects</div>
+							<ul class="objects">
+															<li class=""><a href="../latest/Titanium.Media.AudioPlayer-object.html">AudioPlayer</a></li>
+															<li class=""><a href="../latest/Titanium.Media.AudioRecorder-object.html">AudioRecorder</a></li>
+															<li class=""><a href="../latest/Titanium.Media.Item-object.html">Item</a></li>
+															<li class=""><a href="../latest/Titanium.Media.MusicPlayer-object.html">MusicPlayer</a></li>
+															<li class=""><a href="../latest/Titanium.Media.Sound-object.html">Sound</a></li>
+															<li class=""><a href="../latest/Titanium.Media.VideoPlayer-object.html">VideoPlayer</a></li>
+								
+							</ul>
+																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Network-module.html">Titanium.Network</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Platform-module.html">Titanium.Platform</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI-module.html">Titanium.UI</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Android-module.html">Titanium.UI.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Clipboard-module.html">Titanium.UI.Clipboard</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iOS-module.html">Titanium.UI.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPad-module.html">Titanium.UI.iPad</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPhone-module.html">Titanium.UI.iPhone</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Utils-module.html">Titanium.Utils</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.XML-module.html">Titanium.XML</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Yahoo-module.html">Titanium.Yahoo</a>																										</li>
+						
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="clear"></div>
+	
+	</div> 
+
+</div> 
+
+<footer>
+	<div id="footer">
+		<div class="squeeze">
+			<div style="height:200px;">
+				<footer>
+	<div id="footer">
+		<div class="squeeze">
+	 
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/products/" title="Products">Products</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/" title="Titanium Platform">Titanium Platform</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/titanium-architecture/" title="Titanium Architecture">Titanium Architecture</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-mobile/" title="Titanium Mobile">Titanium Mobile</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-desktop/" title="Titanium Desktop">Titanium Desktop</a></li>
+					<li><a href="http://www.appcelerator.com/products/native/" title="The Native Advantage">The Native Advantage</a></li>
+					<li><a href="http://www.appcelerator.com/products/download/" title="Download Titanium">Download Titanium</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/partners/" title="Partners">Partners</a></li>
+					<li><a href="http://www.appcelerator.com/partners/case-studies/" title="Case Studies">Case Studies</a></li>
+					<li><a href="http://www.appcelerator.com/partners/testimonials/" title="Testimonials">Testimonials</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/resources/" title="Resources">Resources</a></li>
+					<li><a href="http://www.appcelerator.com/resources/app-u/" title="Appcelerator University">Appcelerator University</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/showcase/" title="Showcase">Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/applications-showcase/" title="Applications Showcase">Applications Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/videos/" title="Videos">Videos</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/company/" title="About Appcelerator, Inc.">About Appcelerator, Inc.</a></li>
+					<li><a href="http://www.appcelerator.com/company/leadership-team/" title="Leadership Team">Leadership Team</a></li>
+					<li><a href="http://www.appcelerator.com/company/investors-board/" title="Investors &#038; Board">Investors &#038; Board</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/" title="News &#038; Press">News &#038; Press</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/press-releases/" title="Press Releases">Press Releases</a></li>
+					<li><a href="http://www.appcelerant.com" title="Appcelerant Blog">Appcelerant Blog</a></li>
+					<li><a href="http://www.appcelerator.com/company/contact-us/" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</div> 
+
+			<div class="clear"></div>
+			
+			<div class="legal">
+				<a href="http://www.appcelerator.com"><img style="float:left; margin-right:15px" src="/assets/img/a-logo.png" alt="Appcelerator" /></a>
+				<a href="http://www.appcelerant.com">Blog</a> |  
+				<a href="http://twitter.com/appcelerator">Twitter</a> |
+				<a href="http://www.appcelerator.com/company/privacy">Privacy Policy</a> |
+				<a href="http://www.appcelerator.com/company/terms-and-conditions-of-use">Terms and Conditions</a>
+				<br />
+				&copy; 2008-2011 Appcelerator Inc. All rights reserved.  Appcelerator is a registered trademark.
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+
+<script src="http://munchkin.marketo.net/munchkin.js"></script>
+<script>try { mktoMunchkin("636-NHJ-871"); } catch (err) {}</script>
+<script>
+var _qoptions={qacct:"p-4aHbaizUurMCQ"},
+	_gaq=[['_setAccount','UA-5155164-1'],['_setDomainName','none'],['_setAllowLinker',true],['_setAllowAnchor',true],['_setAllowHash',false],['_addIgnoredOrganic',document.location.host],['_initData'],['_trackPageview']];
+
+(function(d) {
+function load(u){var s=d.getElementsByTagName('script')[0],sc=d.createElement('script');sc.async=true;sc.src=u;s.parentNode.insertBefore(sc,s);}
+
+load('http://www.google-analytics.com/ga.js');
+load('http://api.appcelerator.net/p/beacon.js');
+load('http://api.appcelerator.net/p/analytics.js');
+load('http://edge.quantserve.com/quant.js');
+
+function cc(l,n,s){if(!l||!n||!s||l==''||n==''||s==''){return'-'}var i,i2,i3,c='1';i=l.indexOf(n);i3=n.indexOf('=')+1;if(i>-1){i2=l.indexOf(s,i);if(i2<0){i2=l.length}c=l.substring((i+i3),i2)}return c};
+window._gaToMarketo=function(){var gaCookie=cc(document.cookie,'__utmz=',';');return {cf_campaign:cc(gaCookie,'utmccn=','|'),cf_source:cc(gaCookie,'utmsrc=','|'),cf_medium:cc(gaCookie,'utmcmd=','|'),cf_content:cc(gaCookie,'utmcct=','|'),cf_keyword:cc(gaCookie,'utmctr=','|'),cf_visits:cc(document.cookie,'__utma=',';').split('.')[5]}};
+jQuery(function(){jQuery('form[action*=sub-webform]').each(function(){var _form=this;jQuery.each(_gaToMarketo(),function(k,v){jQuery(_form).append('<input type="hidden" name="'+k+'" value="'+v+'" />')})})})
+})(document);
+</script>
+<noscript><img src="http://pixel.quantserve.com/pixel/p-4aHbaizUurMCQ.gif" style="border:0;display:none;" height="1" width="1" alt="Quantcast"/></noscript>
+</body>
+</html>

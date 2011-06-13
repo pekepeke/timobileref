@@ -1,0 +1,766 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Appcelerator Developer Center - API for Titanium.Facebook (version 1.6.2)</title>
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen" />
+<link rel="image_src" href="/assets/img/appc_icon.jpg"/>
+<meta property="og:site_name" content="Appcelerator Developer Center"/> 
+<meta property="og:image" content="/assets/img/appc_icon.jpg"/> 
+<script src="/assets/js/jquery-1.4.min.js" type="text/javascript"></script>
+	<style>
+	.deprecated
+	{
+		border:1px solid #900;
+		color: #D8000C;
+		background-color: #FFBABA;
+		padding:10px;
+		margin-top:10px;
+		margin-bottom:30px;
+	}
+	.apidoc .namespace_type
+	{
+		font-size:11px;
+		color:#aaa;
+		position:relative;
+		top:-20px;
+	}
+	.apidoc .since
+	{
+		font-size:11px;
+		color:#222;
+		position:absolute;
+		top:30px;
+		right:10px;
+	}
+	.apidoc  table
+	{
+		margin-top:10px;
+		border:1px solid #999;
+		width:99%;
+	}
+	.apidoc table.event
+	{
+		border:1px solid #ccc;
+	}
+	.apidoc table.event td
+	{
+		background-color:#eff;
+	}
+	.apidoc table.event td.name
+	{
+		font-weight:bold;
+		width:100px;
+	}
+	.apidoc table td.type
+	{
+		width:20px;
+	}
+	.apidoc table td
+	{
+		padding:4px;
+		vertical-align:top;
+		border-bottom:1px solid #ddd;
+	}
+	.apidoc table tr:last-child td
+	{
+		border-bottom:none !important;
+	}
+	.apidoc table td.name
+	{
+		font-weight:bold;
+	}
+	.apidoc table th
+	{
+		background-color:#aaa;
+		text-align:left;
+		padding:4px;
+		font-weight:bold;
+	}
+	.apidoc h3
+	{
+		margin-top:20px;
+	}
+	#sidenav .methods, #sidenav .properties, #sidenav .objects
+	{
+		font-size:10px;
+		margin-top:10px;
+		margin-left:0px;
+	}
+	li.subselected a
+	{
+		border-bottom:1px solid #9aa;
+	}
+	.apidoc
+	{
+		position:relative;
+	}
+	div.platforms
+	{
+		position:absolute;
+		right:12px;
+		top:10px;
+	}
+	div.platforms span.android
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/android12x12.png);
+		background-repeat:no-repeat;
+	}
+	div.platforms span.iphone
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/assets/img/iphone12x12.png);
+		background-repeat:no-repeat;
+		top:-1px;
+		position:relative;
+	}
+	div.signature
+	{
+		margin-bottom:20px;
+		color:rgb(153,0,0);
+		font-weight:bold;
+	}
+	.apidoc h1
+	{
+		text-shadow: 2px 2px 2px #bbb;
+	}
+	#search.blur
+	{
+		color:#aaa;
+	}
+	</style>
+</head>
+<body>
+
+<header role="banner">
+	<div id="header">
+		<div class="titlebarLogo">
+	<h1><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h1>
+	<div class="arrow"></div>
+</div>
+<div class="squeeze">
+	<h2><a href="/" title="Appcelerator Developer Center">Appcelerator Developer Center</a></h2>
+	<nav>
+		<div class="login">
+							<a href="https://my.appcelerator.com/auth/signup">Signup</a> | <a href="https://my.appcelerator.com/auth/login?redirect_to=http%3A%2F%2Fdeveloper.appcelerator.com%2Fapidoc%2Fmobile%2Flatest%2FTitanium.Facebook-module">Login</a>
+						<a class="last" href="http://www.appcelerator.com" title="Appcelerator.com"><img src="/assets/img/dotcom.png" style="position:relative;top:4px;left:8px;" alt="Appcelerator"/></a>
+		</div>
+	</nav>
+</div>
+	</div>
+	<div id="nav">
+		<div class="squeeze">
+			<nav>
+	<div class="primary">
+			<div class="  ">
+			<a href="/get_started" title="Get Started">Get Started</a>
+		</div>
+			<div class="  ">
+			<a href="/questions" title="Q&amp;A">Q&amp;A</a>
+		</div>
+			<div class="  ">
+			<a href="/documentation" title="Docs">Docs</a>
+		</div>
+			<div class="  ">
+			<a href="http://training.appcelerator.com/" title="AppU Training">AppU Training</a>
+		</div>
+			<div class="  ">
+			<a href="/devlink" title="DevLink">DevLink</a>
+		</div>
+			<div class="  last ">
+			<a href="/get_help" title="Get Help">Get Help</a>
+		</div>
+			<div class="clear"></div>
+	</div>
+</nav>
+<nav>
+	<div class="secondary">
+					<a class="last" title="Developer Blog" href="/blog">Developer Blog</a>
+			</div>
+</nav>
+		</div>
+	</div>
+</header>
+
+<div id="contentBG">
+
+	<div class="dropshadow"></div>
+	
+	<div class="squeeze">
+	
+		<div class="contentWithLeftSidebar">
+			<div class="apidoc">
+				<div class="apidoc_container apidoc_module">
+
+<h1 class="namespace">Titanium.Facebook</h1>
+<div class="namespace_type">submodule of <a href="../latest/Titanium-module.html">Titanium</a></div>
+
+<div class="platforms">
+<span class="android">&nbsp;&nbsp;&nbsp;</span>
+<span class="iphone">&nbsp;&nbsp;&nbsp;</span>
+<span class="ipad">&nbsp;&nbsp;&nbsp;</span>
+<div class="clear"></div>
+<span class="since">0.8</span>
+</div>
+
+<div class="description">
+<p>The top level Facebook module.  The Facebook module is used for connecting your application with 
+Facebook through the <a href="http://developers.facebook.com/docs/reference/api/">Facebook Graph API</a> (see <tt>requestWithGraphPath</tt>) or the deprecated <a href="http://developers.facebook.com/docs/reference/rest/">Facebook REST API</a> (see <tt>request</tt>).
+Due to how the facebook login process works on iOS, your app will need to have the following in your tiapp.xml if you target those platforms:</p>
+<property name="ti.facebook.appid">your_app_id_here</property>
+
+<p>You must still set Ti.Facebook.appid within your app itself to use the facebook module.  This property is used only for configuring your app to interface with the facebook login process.</p>
+</div>
+
+<h3>Objects</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.LoginButton-object.html">Titanium.Facebook.LoginButton</a></td>
+	<td class="description"><p>The Login Button created by <a href="../latest/Titanium.Facebook.createLoginButton-method.html">Titanium.Facebook.createLoginButton</a>.  This is a Facebook-themed button that does not require a click event handler or any listeners.  It "just works" and changes its label to reflect the current state of the Facebook session.  For example, if the user is already logged in, this button will show "Logout".</p></td>
+</tr>
+</table>
+
+
+<h3>Methods</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.addEventListener-method.html">addEventListener</a></td>
+	<td class="description">add an event listener for the instance to receive view triggered events</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.authorize-method.html">authorize</a></td>
+	<td class="description"><p>Login the user (if not already logged in) and authorize your application.  Be sure to set your desired <tt>permissions</tt> and your <tt>appid</tt> before calling this.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.createLoginButton-method.html">createLoginButton</a></td>
+	<td class="description">create and return an instance of <a href="../latest/Titanium.Facebook.LoginButton-object.html">Titanium.Facebook.LoginButton</a></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.dialog-method.html">dialog</a></td>
+	<td class="description"><p>Open a supported Facebook <a href="http://developers.facebook.com/docs/reference/dialogs/">dialog</a>.  "feed" is just about the only useful one.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.fireEvent-method.html">fireEvent</a></td>
+	<td class="description">fire a synthesized event to the views listener</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.logout-method.html">logout</a></td>
+	<td class="description"><p>Clear the OAuth <tt>accessToken</tt> and logout the user.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.removeEventListener-method.html">removeEventListener</a></td>
+	<td class="description">remove a previously added event listener</td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.request-method.html">request</a></td>
+	<td class="description"><p>Make a request to the deprecated <a href="http://developers.facebook.com/docs/reference/rest/">Facebook REST API</a>.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="../latest/Titanium.Facebook.requestWithGraphPath-method.html">requestWithGraphPath</a></td>
+	<td class="description"><p>Make a <a href="http://developers.facebook.com/docs/reference/api/">Facebook Graph API</a> request.  If the request requires user authorization, be sure user is already logged-in and your app is authorized.  (You can check <tt>loggedIn</tt> for that.)</p></td>
+</tr>
+</table>
+
+<h3>Properties</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name">accessToken</td>
+	<td class="type">string</td>
+	<td class="description"><p>OAuth token set after a successful <tt>authorize</tt>.</p></td>
+</tr>
+<tr>
+	<td class="name">appid</td>
+	<td class="type">string</td>
+	<td class="description"><p>your Facebook application id.  You need to set this for anything to work.</p></td>
+</tr>
+<tr>
+	<td class="name">expirationDate</td>
+	<td class="type">date</td>
+	<td class="description"><p>Time at which the <tt>accessToken</tt> expires.</p></td>
+</tr>
+<tr>
+	<td class="name">forceDialogAuth</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>(Android only).  Set to false to enable "Single-Sign-On" in cases where the official Facebook app is on the device.  Default is true, meaning the traditional, dialog-based authentication is used rather than Single-Sign-On.  See <a href="http://developers.facebook.com/docs/guides/mobile">Facebook Mobile Guide</a> for details of their Single-Sign-On schem.</p></td>
+</tr>
+<tr>
+	<td class="name">loggedIn</td>
+	<td class="type">boolean</td>
+	<td class="description"><p>returns true if the user has logged in</p></td>
+</tr>
+<tr>
+	<td class="name">permissions</td>
+	<td class="type">object</td>
+	<td class="description"><p>set/return an array of permissions to request for your app.  Be sure the permissions you want are set before calling <tt>authorize</tt>.</p></td>
+</tr>
+<tr>
+	<td class="name">uid</td>
+	<td class="type">string</td>
+	<td class="description"><p>the unique user id returned from Facebook.</p></td>
+</tr>
+</table>
+
+<h3>Events</h3>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Description</th>
+</tr> 
+<tr>
+	<td class="name">login</td>
+	<td class="description">
+		<p>fired at session login</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">cancelled</td><td><p>true if the user cancelled the request by closing the dialog</p></td></tr>
+			<tr><td class="name">data</td><td><p>data returned by Facebook when we query for the uid (using graph path "me") after successful login.  Data is in JSON format.  Includes information such as user name, locale and gender.</p></td></tr>
+			<tr><td class="name">error</td><td><p>error message if success was false</p></td></tr>
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">success</td><td><p>true if the login was successful</p></td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+			<tr><td class="name">uid</td><td><p>the user id returned by Facebook if the login was successful.</p></td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="name">logout</td>
+	<td class="description">
+		<p>fired at session logout</p>
+		<h4>Event properties</h4>
+		<table class="event">
+			<tr><td class="name">source</td><td>the source object that fired the event</td></tr>
+			<tr><td class="name">type</td><td>the name of the event fired</td></tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+<h3>Notes</h3>
+
+<p>Titanium Mobile SDK 1.6.0 marked a significant change for this module.  Older versions of the module were not compatible with the new Graph API.  Applications written for the pre-1.6.0 version of this module will <strong>not</strong> work with the 1.6.0 and higher versions.  Nor is the code shown in the examples here backwards-compatible with pre-1.6.0 Titanium Mobile SDK.</p>
+
+
+<h3>Code Examples</h3>
+
+<h4 class="code_example_title">Authorize</h4>
+<div class="code_example"><p>Shows official Facebook dialog for logging in the user and prompting the user to approve your requested permissions.  Listen for the module's "login" event to determine success/failure.</p>
+<pre><div class="highlight"><pre><span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">appid</span> <span class="o">=</span> <span class="s1">&#39;[YOUR APPID]&#39;</span><span class="p">;</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">permissions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;publish_stream&#39;</span><span class="p">];</span> <span class="c1">// Permissions your app needs</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Logged In&#39;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">cancelled</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Cancelled&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">authorize</span><span class="p">();</span>
+</pre></div>
+</pre></div>
+
+<h4 class="code_example_title">Logout</h4>
+<div class="code_example"><p>Logout the user and forget the authorization token.  Listen for the module's "logout" event to determine when logout is finished.</p>
+<pre><div class="highlight"><pre><span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;logout&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Logged out&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">logout</span><span class="p">();</span>
+</pre></div>
+</pre></div>
+
+<h4 class="code_example_title">Authorize/Logout via the special LoginButton</h4>
+<div class="code_example"><p>We've provided the Facebook-themed LoginButton which updates its state automatically depending on whether the user is logged-in or not.  I.e., when the user is logged-in, then the button will show "Logout", and vice-versa.</p>
+<p>Note that you don't need to set a click listener or anything else on the button.  It "just works".  To listen for the actual login and logout events (which are part of the Titanium Facebook module and not specific to the login button), add listeners at the module level as in the example below.</p>
+<pre><div class="highlight"><pre><span class="c1">// Don&#39;t forget to set your appid and requested permissions, else the login button</span>
+<span class="c1">// won&#39;t be effective.</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">appid</span> <span class="o">=</span> <span class="s1">&#39;[your appid]&#39;</span><span class="p">;</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">permissions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;publish_stream&#39;</span><span class="p">];</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Logged in&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;logout&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Logged out&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// add the button.  Note that it doesn&#39;t need a click event or anything.</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">currentWindow</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">createLoginButton</span><span class="p">({</span> <span class="nx">top</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;wide&#39;</span> <span class="p">}));</span>
+</pre></div>
+</pre>
+
+<p>The <tt>style:'wide'</tt> shows a wide version of the button that displays "Connect with Facebook" instead of just "Connect".</p></div>
+
+<h4 class="code_example_title">Simple Graph API call</h4>
+<div class="code_example"><p>This example makes a call to the "me" graph path and displays the results, which will be JSON from Facebook.  It assumes the user is already logged-in (you can check this with <a href="../latest/Titanium.Facebook.loggedIn-property.html">Titanium.Facebook.loggedIn</a>.)</p>
+<pre><div class="highlight"><pre><span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">requestWithGraphPath</span><span class="p">(</span><span class="s1">&#39;me&#39;</span><span class="p">,</span> <span class="p">{},</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Unknown response&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</pre></div>
+
+<h4 class="code_example_title">Create an Event with Graph API</h4>
+<div class="code_example"><p>This example uses the Graph API to <a href="http://developers.facebook.com/docs/reference/api/event/">create an event</a> in the logged-on user's Facebook account.  This requires the "create_event" permission.</p>
+<pre><div class="highlight"><pre><span class="c1">// First make sure this permission exists</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">permissions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;create_event&#39;</span><span class="p">];</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">authorize</span><span class="p">();</span>
+
+<span class="c1">// ...</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// Now create the event after you&#39;ve confirmed authorize() was successful.</span>
+<span class="kd">var</span> <span class="nx">starttime</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">endtime</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="s2">&quot;Barry&#39;s Birthday Celebration&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">description</span> <span class="o">=</span> <span class="s2">&quot;Barry will have a great party&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">start_time</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">starttime</span><span class="p">),</span> <span class="c1">// API expects a JSON stringified date</span>
+    <span class="nx">end_time</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">endtime</span><span class="p">),</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="nx">description</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="nx">title</span>
+<span class="p">};</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">requestWithGraphPath</span><span class="p">(</span><span class="s1">&#39;me/events&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Success! Returned from FB: &quot;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Unknown result&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</pre></div>
+
+<h4 class="code_example_title">Set user's Facebook status with Graph API</h4>
+<div class="code_example"><p>Use the Graph API to set the <a href="http://developers.facebook.com/docs/reference/api/status/">user's Facebook status</a>.  Requires the "publish_stream" permissions.</p>
+<pre><div class="highlight"><pre><span class="c1">// First make sure this permission exists</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">permissions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;publish_stream&#39;</span><span class="p">];</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">authorize</span><span class="p">();</span>
+
+<span class="c1">// ...</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// Now create the status message after you&#39;ve confirmed that authorize() succeeded</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">requestWithGraphPath</span><span class="p">(</span><span class="s1">&#39;me/feed&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;Trying out FB Graph API and it&#39;s fun!&quot;</span><span class="p">},</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Success!  From FB: &quot;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Unkown result&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</pre></div>
+
+<h4 class="code_example_title">Post a photo using the Graph API</h4>
+<div class="code_example"><p>This example <a href="http://developers.facebook.com/docs/reference/api/photo/">posts a photo to the user's account</a> using the Graph API.  Another example below shows how to do this with the REST API, if desired.  This requires the "publish_stream" permission.</p>
+<pre><div class="highlight"><pre><span class="c1">// First make sure this permission exists</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">permissions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;publish_stream&#39;</span><span class="p">];</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">authorize</span><span class="p">();</span>
+
+<span class="c1">// ...</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// Now post the photo after you&#39;ve confirmed that authorize() succeeded</span>
+<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">Ti</span><span class="p">.</span><span class="nx">Filesystem</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="s1">&#39;pumpkin.jpg&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="nx">f</span><span class="p">.</span><span class="nx">read</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;This is a pumpkin&#39;</span><span class="p">,</span>
+    <span class="nx">picture</span><span class="o">:</span> <span class="nx">blob</span>
+<span class="p">};</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">requestWithGraphPath</span><span class="p">(</span><span class="s1">&#39;me/photos&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Success!  From FB: &quot;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Unkown result&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</pre></div>
+
+<h4 class="code_example_title">Post a photo using the REST API</h4>
+<div class="code_example"><p>This example <a href="http://developers.facebook.com/docs/reference/rest/photos.upload/">posts a photo to the user's account</a> using the REST API.  Another example above shows how to do this with the Graph API.  This requires the "publish_stream" permission.</p>
+<pre><div class="highlight"><pre><span class="c1">// First make sure this permission exists</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">permissions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;publish_stream&#39;</span><span class="p">];</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">authorize</span><span class="p">();</span>
+
+<span class="c1">// ...</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// Now post the photo after you&#39;ve confirmed that authorize() succeeded</span>
+<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">Ti</span><span class="p">.</span><span class="nx">Filesystem</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="s1">&#39;pumpkin.jpg&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="nx">f</span><span class="p">.</span><span class="nx">read</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">caption</span><span class="o">:</span> <span class="s1">&#39;This is a pumpkin&#39;</span><span class="p">,</span>
+    <span class="nx">picture</span><span class="o">:</span> <span class="nx">blob</span>
+<span class="p">};</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="s1">&#39;photos.upload&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Success!  From FB: &quot;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Unkown result&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</pre></div>
+
+<h4 class="code_example_title">Show the Facebook Feed Dialog</h4>
+<div class="code_example"><p>This example shows how to display the <a href="http://developers.facebook.com/docs/reference/dialogs/feed/">official Facebook dialog</a> for making a post to the user's feed.  In this example, we'll prefill some of the feed fields by passing a data dictionary to the dialog() method; this is not required.</p>
+<pre><div class="highlight"><pre><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">link</span><span class="o">:</span> <span class="s2">&quot;http://www.appcelerator.com&quot;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Appcelerator Titanium Mobile&quot;</span><span class="p">,</span>
+    <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;Checkout this cool open source project for creating mobile apps&quot;</span><span class="p">,</span>
+    <span class="nx">caption</span><span class="o">:</span> <span class="s2">&quot;Appcelerator Titanium Mobile&quot;</span><span class="p">,</span>
+    <span class="nx">picture</span><span class="o">:</span> <span class="s2">&quot;http://developer.appcelerator.com/assets/img/DEV_titmobile_image.png&quot;</span><span class="p">,</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="s2">&quot;You&#39;ve got the ideas, now you&#39;ve got the power. Titanium translates your hard won web skills into native applications...&quot;</span>
+<span class="p">};</span>
+<span class="nx">Titanium</span><span class="p">.</span><span class="nx">Facebook</span><span class="p">.</span><span class="nx">dialog</span><span class="p">(</span><span class="s2">&quot;feed&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Success!  From FB: &quot;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">cancelled</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Cancelled&#39;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Unkown result&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</pre></div>
+
+
+
+</div>			</div>
+		</div> 
+	
+		<div class="leftSidebar">
+			<h3>Mobile API Reference</h3>
+			<div style="margin-bottom:10px;">
+				<form method="GET" action="/apidoc/search/mobile/1.6.2">
+					<input class="blur" id="search" type="search" value="search documentation" name="q" style="width:99%"/>
+				</form>
+			</div>
+			<script>
+				$(function()
+				{
+					$('#search').blur(function()
+					{
+						$(this).val('search documentation').addClass('blur');
+					});
+					$('#search').focus(function()
+					{
+						$(this).val('').removeClass('blur');
+					});
+				});
+			</script>
+			<nav>
+				<ul id="sidenav">
+											<li class="">
+							<a href="../latest/Titanium-module.html">Titanium</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.API-module.html">Titanium.API</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Accelerometer-module.html">Titanium.Accelerometer</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Analytics-module.html">Titanium.Analytics</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android-module.html">Titanium.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.Calendar-module.html">Titanium.Android.Calendar</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Android.NotificationManager-module.html">Titanium.Android.NotificationManager</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App-module.html">Titanium.App</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Android-module.html">Titanium.App.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.Properties-module.html">Titanium.App.Properties</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.App.iOS-module.html">Titanium.App.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Contacts-module.html">Titanium.Contacts</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Database-module.html">Titanium.Database</a>																										</li>
+											<li class="selected">
+							<a href="../latest/Titanium.Facebook-module.html">Titanium.Facebook</a>													<div class="objects">Objects</div>
+							<ul class="objects">
+															<li class=""><a href="../latest/Titanium.Facebook.LoginButton-object.html">LoginButton</a></li>
+								
+							</ul>
+																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Filesystem-module.html">Titanium.Filesystem</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Geolocation-module.html">Titanium.Geolocation</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Gesture-module.html">Titanium.Gesture</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Locale-module.html">Titanium.Locale</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Map-module.html">Titanium.Map</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Media-module.html">Titanium.Media</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Network-module.html">Titanium.Network</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Platform-module.html">Titanium.Platform</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI-module.html">Titanium.UI</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Android-module.html">Titanium.UI.Android</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.Clipboard-module.html">Titanium.UI.Clipboard</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iOS-module.html">Titanium.UI.iOS</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPad-module.html">Titanium.UI.iPad</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.UI.iPhone-module.html">Titanium.UI.iPhone</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Utils-module.html">Titanium.Utils</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.XML-module.html">Titanium.XML</a>																										</li>
+											<li class="">
+							<a href="../latest/Titanium.Yahoo-module.html">Titanium.Yahoo</a>																										</li>
+						
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="clear"></div>
+	
+	</div> 
+
+</div> 
+
+<footer>
+	<div id="footer">
+		<div class="squeeze">
+			<div style="height:200px;">
+				<footer>
+	<div id="footer">
+		<div class="squeeze">
+	 
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/products/" title="Products">Products</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/" title="Titanium Platform">Titanium Platform</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/titanium-architecture/" title="Titanium Architecture">Titanium Architecture</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-mobile/" title="Titanium Mobile">Titanium Mobile</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-desktop/" title="Titanium Desktop">Titanium Desktop</a></li>
+					<li><a href="http://www.appcelerator.com/products/native/" title="The Native Advantage">The Native Advantage</a></li>
+					<li><a href="http://www.appcelerator.com/products/download/" title="Download Titanium">Download Titanium</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/partners/" title="Partners">Partners</a></li>
+					<li><a href="http://www.appcelerator.com/partners/case-studies/" title="Case Studies">Case Studies</a></li>
+					<li><a href="http://www.appcelerator.com/partners/testimonials/" title="Testimonials">Testimonials</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/resources/" title="Resources">Resources</a></li>
+					<li><a href="http://www.appcelerator.com/resources/app-u/" title="Appcelerator University">Appcelerator University</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/showcase/" title="Showcase">Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/applications-showcase/" title="Applications Showcase">Applications Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/videos/" title="Videos">Videos</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/company/" title="About Appcelerator, Inc.">About Appcelerator, Inc.</a></li>
+					<li><a href="http://www.appcelerator.com/company/leadership-team/" title="Leadership Team">Leadership Team</a></li>
+					<li><a href="http://www.appcelerator.com/company/investors-board/" title="Investors &#038; Board">Investors &#038; Board</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/" title="News &#038; Press">News &#038; Press</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/press-releases/" title="Press Releases">Press Releases</a></li>
+					<li><a href="http://www.appcelerant.com" title="Appcelerant Blog">Appcelerant Blog</a></li>
+					<li><a href="http://www.appcelerator.com/company/contact-us/" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</div> 
+
+			<div class="clear"></div>
+			
+			<div class="legal">
+				<a href="http://www.appcelerator.com"><img style="float:left; margin-right:15px" src="/assets/img/a-logo.png" alt="Appcelerator" /></a>
+				<a href="http://www.appcelerant.com">Blog</a> |  
+				<a href="http://twitter.com/appcelerator">Twitter</a> |
+				<a href="http://www.appcelerator.com/company/privacy">Privacy Policy</a> |
+				<a href="http://www.appcelerator.com/company/terms-and-conditions-of-use">Terms and Conditions</a>
+				<br />
+				&copy; 2008-2011 Appcelerator Inc. All rights reserved.  Appcelerator is a registered trademark.
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
+
+<script src="http://munchkin.marketo.net/munchkin.js"></script>
+<script>try { mktoMunchkin("636-NHJ-871"); } catch (err) {}</script>
+<script>
+var _qoptions={qacct:"p-4aHbaizUurMCQ"},
+	_gaq=[['_setAccount','UA-5155164-1'],['_setDomainName','none'],['_setAllowLinker',true],['_setAllowAnchor',true],['_setAllowHash',false],['_addIgnoredOrganic',document.location.host],['_initData'],['_trackPageview']];
+
+(function(d) {
+function load(u){var s=d.getElementsByTagName('script')[0],sc=d.createElement('script');sc.async=true;sc.src=u;s.parentNode.insertBefore(sc,s);}
+
+load('http://www.google-analytics.com/ga.js');
+load('http://api.appcelerator.net/p/beacon.js');
+load('http://api.appcelerator.net/p/analytics.js');
+load('http://edge.quantserve.com/quant.js');
+
+function cc(l,n,s){if(!l||!n||!s||l==''||n==''||s==''){return'-'}var i,i2,i3,c='1';i=l.indexOf(n);i3=n.indexOf('=')+1;if(i>-1){i2=l.indexOf(s,i);if(i2<0){i2=l.length}c=l.substring((i+i3),i2)}return c};
+window._gaToMarketo=function(){var gaCookie=cc(document.cookie,'__utmz=',';');return {cf_campaign:cc(gaCookie,'utmccn=','|'),cf_source:cc(gaCookie,'utmsrc=','|'),cf_medium:cc(gaCookie,'utmcmd=','|'),cf_content:cc(gaCookie,'utmcct=','|'),cf_keyword:cc(gaCookie,'utmctr=','|'),cf_visits:cc(document.cookie,'__utma=',';').split('.')[5]}};
+jQuery(function(){jQuery('form[action*=sub-webform]').each(function(){var _form=this;jQuery.each(_gaToMarketo(),function(k,v){jQuery(_form).append('<input type="hidden" name="'+k+'" value="'+v+'" />')})})})
+})(document);
+</script>
+<noscript><img src="http://pixel.quantserve.com/pixel/p-4aHbaizUurMCQ.gif" style="border:0;display:none;" height="1" width="1" alt="Quantcast"/></noscript>
+</body>
+</html>
